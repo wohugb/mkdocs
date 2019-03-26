@@ -1,181 +1,1858 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <meta name="author" content="MkDocs Team">
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Project documentation with Markdown.">
+      
+      
         <link rel="canonical" href="https://www.mkdocs.org/about/release-notes/">
-        <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Release Notes - MkDocs</title>
-        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-        <link href="../../css/extra.css" rel="stylesheet">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-        <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/django.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-            ga('create', 'UA-27795084-5', 'mkdocs.org');
-            ga('send', 'pageview');
-        </script> 
-    </head>
-
-    <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="../..">MkDocs</a>
-                </div>
-
-                <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li >
-                                <a href="../..">Home</a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li >
-    <a href="../../user-guide/writing-your-docs/">Writing Your Docs</a>
-</li>
-                                    
-<li >
-    <a href="../../user-guide/styling-your-docs/">Styling Your Docs</a>
-</li>
-                                    
-<li >
-    <a href="../../user-guide/configuration/">Configuration</a>
-</li>
-                                    
-<li >
-    <a href="../../user-guide/deploying-your-docs/">Deploying Your Docs</a>
-</li>
-                                    
-<li >
-    <a href="../../user-guide/custom-themes/">Custom Themes</a>
-</li>
-                                    
-<li >
-    <a href="../../user-guide/plugins/">Plugins</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown active">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li class="active">
-    <a href="./">Release Notes</a>
-</li>
-                                    
-<li >
-    <a href="../contributing/">Contributing</a>
-</li>
-                                    
-<li >
-    <a href="../license/">License</a>
-</li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li >
-                                <a rel="next" href="../../user-guide/plugins/">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li >
-                                <a rel="prev" href="../contributing/">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/mkdocs/mkdocs/"><i class="fa fa-github"></i> GitHub</a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
+      
+      
+        <meta name="author" content="MkDocs Team">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.0">
+    
+    
+      
+        <title>发行说明 - MkDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-27795084-5", "mkdocs.org")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://www.mkdocs.org" title="MkDocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              MkDocs
+            </span>
+            <span class="md-header-nav__topic">
+              发行说明
+            </span>
+          
         </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
 
-        <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#release-notes">Release Notes</a></li>
-            <li><a href="#upgrading">Upgrading</a></li>
-            <li><a href="#maintenance-team">Maintenance team</a></li>
-            <li><a href="#version-104-2018-09-07">Version 1.0.4 (2018-09-07)</a></li>
-            <li><a href="#version-103-2018-08-29">Version 1.0.3 (2018-08-29)</a></li>
-            <li><a href="#version-102-2018-08-22">Version 1.0.2 (2018-08-22)</a></li>
-            <li><a href="#version-101-2018-08-13">Version 1.0.1 (2018-08-13)</a></li>
-            <li><a href="#version-10-2018-08-03">Version 1.0 (2018-08-03)</a></li>
-            <li><a href="#version-0175-2018-07-06">Version 0.17.5 (2018-07-06)</a></li>
-            <li><a href="#version-0174-2018-06-08">Version 0.17.4 (2018-06-08)</a></li>
-            <li><a href="#version-0173-2018-03-07">Version 0.17.3 (2018-03-07)</a></li>
-            <li><a href="#version-0172-2017-11-15">Version 0.17.2 (2017-11-15)</a></li>
-            <li><a href="#version-0171-2017-10-30">Version 0.17.1 (2017-10-30)</a></li>
-            <li><a href="#version-0170-2017-10-19">Version 0.17.0 (2017-10-19)</a></li>
-            <li><a href="#version-0163-2017-04-04">Version 0.16.3 (2017-04-04)</a></li>
-            <li><a href="#version-0162-2017-03-13">Version 0.16.2 (2017-03-13)</a></li>
-            <li><a href="#version-0161-2016-12-22">Version 0.16.1 (2016-12-22)</a></li>
-            <li><a href="#version-016-2016-11-04">Version 0.16 (2016-11-04)</a></li>
-            <li><a href="#version-0153-2016-02-18">Version 0.15.3 (2016-02-18)</a></li>
-            <li><a href="#version-0152-2016-02-08">Version 0.15.2 (2016-02-08)</a></li>
-            <li><a href="#version-0151-2016-01-30">Version 0.15.1 (2016-01-30)</a></li>
-            <li><a href="#version-0150-2016-01-21">Version 0.15.0 (2016-01-21)</a></li>
-            <li><a href="#version-0140-2015-06-09">Version 0.14.0 (2015-06-09)</a></li>
-            <li><a href="#version-0133-2015-06-02">Version 0.13.3 (2015-06-02)</a></li>
-            <li><a href="#version-0132-2015-05-30">Version 0.13.2 (2015-05-30)</a></li>
-            <li><a href="#version-0131-2015-05-27">Version 0.13.1 (2015-05-27)</a></li>
-            <li><a href="#version-0130-2015-05-26">Version 0.13.0 (2015-05-26)</a></li>
-            <li><a href="#version-0122-2015-04-22">Version 0.12.2 (2015-04-22)</a></li>
-            <li><a href="#version-0121-2015-04-14">Version 0.12.1 (2015-04-14)</a></li>
-            <li><a href="#version-0120-2015-04-14">Version 0.12.0 (2015-04-14)</a></li>
-            <li><a href="#version-0111-2014-11-20">Version 0.11.1 (2014-11-20)</a></li>
-            <li><a href="#version-0110-2014-11-18">Version 0.11.0 (2014-11-18)</a></li>
-            <li><a href="#version-0100-2014-10-29">Version 0.10.0 (2014-10-29)</a></li>
+
+  
+
+<a href="https://github.com/mkdocs/mkdocs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="主页" class="md-tabs__link">
+        主页
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../user-guide/writing-your-docs/" title="用户指南" class="md-tabs__link">
+          用户指南
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="关于" class="md-tabs__link md-tabs__link--active">
+          关于
+        </a>
+      
+    </li>
+  
+
+      
     </ul>
-</div></div>
-                <div class="col-md-9" role="main">
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://www.mkdocs.org" title="MkDocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    MkDocs
+  </label>
+  
+    <div class="md-nav__source">
+      
 
-<h1 id="release-notes">Release Notes<a class="headerlink" href="#release-notes" title="Permanent link"></a></h1>
+
+  
+
+<a href="https://github.com/mkdocs/mkdocs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      用户指南
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        用户指南
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-guide/writing-your-docs/" title="编辑文档" class="md-nav__link">
+      编辑文档
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-guide/styling-your-docs/" title="化妆文档" class="md-nav__link">
+      化妆文档
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-guide/configuration/" title="配置" class="md-nav__link">
+      配置
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-guide/deploying-your-docs/" title="部署文档" class="md-nav__link">
+      部署文档
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-guide/custom-themes/" title="自定义主题" class="md-nav__link">
+      自定义主题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../user-guide/plugins/" title="插件" class="md-nav__link">
+      插件
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      关于
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        关于
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        发行说明
+      </label>
+    
+    <a href="./" title="发行说明" class="md-nav__link md-nav__link--active">
+      发行说明
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="升级" class="md-nav__link">
+    升级
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="维修团队" class="md-nav__link">
+    维修团队
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" title="版本1.1（开发中）" class="md-nav__link">
+    版本1.1（开发中）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11_1" title="版本1.1的主要补充" class="md-nav__link">
+    版本1.1的主要补充
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lunrpyprebuild_index" title="支持Lunr.py作为prebuild_index引擎" class="md-nav__link">
+    支持Lunr.py作为prebuild_index引擎
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readthedocs5881374" title="readthedocs主题更新为上游（＃588和＃1374）" class="md-nav__link">
+    readthedocs主题更新为上游（＃588和＃1374）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mkdocsbootswatch-4131563" title="将mkdocs主题更新为bootswatch 4.1.3（＃1563）" class="md-nav__link">
+    将mkdocs主题更新为bootswatch 4.1.3（＃1563）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11_2" title="版本1.1的其他更改和补充" class="md-nav__link">
+    版本1.1的其他更改和补充
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1042018-09-07" title="版本1.0.4（2018-09-07）" class="md-nav__link">
+    版本1.0.4（2018-09-07）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-103-2018-08-29" title="Version 1.0.3 (2018-08-29)" class="md-nav__link">
+    Version 1.0.3 (2018-08-29)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-102-2018-08-22" title="Version 1.0.2 (2018-08-22)" class="md-nav__link">
+    Version 1.0.2 (2018-08-22)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-101-2018-08-13" title="Version 1.0.1 (2018-08-13)" class="md-nav__link">
+    Version 1.0.1 (2018-08-13)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102018-08-03" title="版本1.0（2018-08-03）" class="md-nav__link">
+    版本1.0（2018-08-03）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10" title="版本1.0的主要补充" class="md-nav__link">
+    版本1.0的主要补充
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="页面，文件和导航的内部重构" class="md-nav__link">
+    页面，文件和导航的内部重构
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="向后不兼容的变化" class="md-nav__link">
+    向后不兼容的变化
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use_directory_urlsfalseurl" title="当use_directory_urls为'False`时，URL已经改变" class="md-nav__link">
+    当use_directory_urls为'False`时，URL已经改变
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagesnav" title="pages配置设置已重命名为nav" class="md-nav__link">
+    pages配置设置已重命名为nav
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#base_url" title="模板变量和base_url" class="md-nav__link">
+    模板变量和base_url
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#543" title="基于路径的设置与配置文件相关（＃543）" class="md-nav__link">
+    基于路径的设置与配置文件相关（＃543）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yaml1542" title="增加对YAML元数据的支持（＃1542）" class="md-nav__link">
+    增加对YAML元数据的支持（＃1542）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="重构搜索插件" class="md-nav__link">
+    重构搜索插件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theme_dir" title="theme_dir配置选项完全不推荐使用" class="md-nav__link">
+    theme_dir配置选项完全不推荐使用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10_1" title="版本1.0的其他更改和添加" class="md-nav__link">
+    版本1.0的其他更改和添加
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0175-2018-07-06" title="Version 0.17.5 (2018-07-06)" class="md-nav__link">
+    Version 0.17.5 (2018-07-06)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0174-2018-06-08" title="Version 0.17.4 (2018-06-08)" class="md-nav__link">
+    Version 0.17.4 (2018-06-08)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0173-2018-03-07" title="Version 0.17.3 (2018-03-07)" class="md-nav__link">
+    Version 0.17.3 (2018-03-07)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0172-2017-11-15" title="Version 0.17.2 (2017-11-15)" class="md-nav__link">
+    Version 0.17.2 (2017-11-15)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0171-2017-10-30" title="Version 0.17.1 (2017-10-30)" class="md-nav__link">
+    Version 0.17.1 (2017-10-30)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#01702017-10-19" title="版本0.17.0（2017-10-19）" class="md-nav__link">
+    版本0.17.0（2017-10-19）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0170" title="版本0.17.0的主要附加内容" class="md-nav__link">
+    版本0.17.0的主要附加内容
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-206" title="插件API。 （＃206）" class="md-nav__link">
+    插件API。 （＃206）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1164" title="主题定制。 （＃1164）" class="md-nav__link">
+    主题定制。 （＃1164）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1168" title="先前已弃用的模板变量已删除。 （＃1168）" class="md-nav__link">
+    先前已弃用的模板变量已删除。 （＃1168）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="页面模板" class="md-nav__link">
+    页面模板
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="上下文变量" class="md-nav__link">
+    上下文变量
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-populated-extra_css-and-extra_javascript-fully-deprecated-986" title="Auto-Populated extra_css and extra_javascript Fully Deprecated. (#986)" class="md-nav__link">
+    Auto-Populated extra_css and extra_javascript Fully Deprecated. (#986)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-changes-and-additions-to-version-0170" title="Other Changes and Additions to Version 0.17.0" class="md-nav__link">
+    Other Changes and Additions to Version 0.17.0
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0163-2017-04-04" title="Version 0.16.3 (2017-04-04)" class="md-nav__link">
+    Version 0.16.3 (2017-04-04)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0162-2017-03-13" title="Version 0.16.2 (2017-03-13)" class="md-nav__link">
+    Version 0.16.2 (2017-03-13)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0161-2016-12-22" title="Version 0.16.1 (2016-12-22)" class="md-nav__link">
+    Version 0.16.1 (2016-12-22)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-016-2016-11-04" title="Version 0.16 (2016-11-04)" class="md-nav__link">
+    Version 0.16 (2016-11-04)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#major-additions-to-version-0160" title="Major Additions to Version 0.16.0" class="md-nav__link">
+    Major Additions to Version 0.16.0
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#template-variables-refactored-874" title="Template variables refactored. (#874)" class="md-nav__link">
+    Template variables refactored. (#874)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#page-context" title="Page Context" class="md-nav__link">
+    Page Context
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-context" title="Global Context" class="md-nav__link">
+    Global Context
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#increased-template-customization-607" title="Increased Template Customization. (#607)" class="md-nav__link">
+    Increased Template Customization. (#607)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-populated-extra_css-and-extra_javascript-deprecated-986" title="Auto-Populated extra_css and extra_javascript Deprecated. (#986)" class="md-nav__link">
+    Auto-Populated extra_css and extra_javascript Deprecated. (#986)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-for-dirty-builds-990" title="Support for dirty builds. (#990)" class="md-nav__link">
+    Support for dirty builds. (#990)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stricter-directory-validation" title="Stricter Directory Validation" class="md-nav__link">
+    Stricter Directory Validation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-changes-and-additions-to-version-0160" title="Other Changes and Additions to Version 0.16.0" class="md-nav__link">
+    Other Changes and Additions to Version 0.16.0
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0153-2016-02-18" title="Version 0.15.3 (2016-02-18)" class="md-nav__link">
+    Version 0.15.3 (2016-02-18)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0152-2016-02-08" title="Version 0.15.2 (2016-02-08)" class="md-nav__link">
+    Version 0.15.2 (2016-02-08)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0151-2016-01-30" title="Version 0.15.1 (2016-01-30)" class="md-nav__link">
+    Version 0.15.1 (2016-01-30)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0150-2016-01-21" title="Version 0.15.0 (2016-01-21)" class="md-nav__link">
+    Version 0.15.0 (2016-01-21)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#major-additions-to-version-0150" title="Major Additions to Version 0.15.0" class="md-nav__link">
+    Major Additions to Version 0.15.0
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-support-for-installable-themes" title="Add support for installable themes" class="md-nav__link">
+    Add support for installable themes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-changes-and-additions-to-version-0150" title="Other Changes and Additions to Version 0.15.0" class="md-nav__link">
+    Other Changes and Additions to Version 0.15.0
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0140-2015-06-09" title="Version 0.14.0 (2015-06-09)" class="md-nav__link">
+    Version 0.14.0 (2015-06-09)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0133-2015-06-02" title="Version 0.13.3 (2015-06-02)" class="md-nav__link">
+    Version 0.13.3 (2015-06-02)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0132-2015-05-30" title="Version 0.13.2 (2015-05-30)" class="md-nav__link">
+    Version 0.13.2 (2015-05-30)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0131-2015-05-27" title="Version 0.13.1 (2015-05-27)" class="md-nav__link">
+    Version 0.13.1 (2015-05-27)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0130-2015-05-26" title="Version 0.13.0 (2015-05-26)" class="md-nav__link">
+    Version 0.13.0 (2015-05-26)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deprecations-to-version-0130" title="Deprecations to Version 0.13.0" class="md-nav__link">
+    Deprecations to Version 0.13.0
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deprecate-the-json-command" title="Deprecate the JSON command" class="md-nav__link">
+    Deprecate the JSON command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-the-pages-configuration" title="Change the pages configuration" class="md-nav__link">
+    Change the pages configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warn-users-about-the-removal-of-builtin-themes" title="Warn users about the removal of builtin themes" class="md-nav__link">
+    Warn users about the removal of builtin themes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#major-additions-to-version-0130" title="Major Additions to Version 0.13.0" class="md-nav__link">
+    Major Additions to Version 0.13.0
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#search" title="Search" class="md-nav__link">
+    Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-command-line-interface" title="New Command Line Interface" class="md-nav__link">
+    New Command Line Interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-extra-html-and-xml-files" title="Support Extra HTML and XML files" class="md-nav__link">
+    Support Extra HTML and XML files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-changes-and-additions-to-version-0130" title="Other Changes and Additions to Version 0.13.0" class="md-nav__link">
+    Other Changes and Additions to Version 0.13.0
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0122-2015-04-22" title="Version 0.12.2 (2015-04-22)" class="md-nav__link">
+    Version 0.12.2 (2015-04-22)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0121-2015-04-14" title="Version 0.12.1 (2015-04-14)" class="md-nav__link">
+    Version 0.12.1 (2015-04-14)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0120-2015-04-14" title="Version 0.12.0 (2015-04-14)" class="md-nav__link">
+    Version 0.12.0 (2015-04-14)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0111-2014-11-20" title="Version 0.11.1 (2014-11-20)" class="md-nav__link">
+    Version 0.11.1 (2014-11-20)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0110-2014-11-18" title="Version 0.11.0 (2014-11-18)" class="md-nav__link">
+    Version 0.11.0 (2014-11-18)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0100-2014-10-29" title="Version 0.10.0 (2014-10-29)" class="md-nav__link">
+    Version 0.10.0 (2014-10-29)
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contributing/" title="贡献" class="md-nav__link">
+      贡献
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../license/" title="证书" class="md-nav__link">
+      证书
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="升级" class="md-nav__link">
+    升级
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="维修团队" class="md-nav__link">
+    维修团队
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11" title="版本1.1（开发中）" class="md-nav__link">
+    版本1.1（开发中）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11_1" title="版本1.1的主要补充" class="md-nav__link">
+    版本1.1的主要补充
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lunrpyprebuild_index" title="支持Lunr.py作为prebuild_index引擎" class="md-nav__link">
+    支持Lunr.py作为prebuild_index引擎
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readthedocs5881374" title="readthedocs主题更新为上游（＃588和＃1374）" class="md-nav__link">
+    readthedocs主题更新为上游（＃588和＃1374）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mkdocsbootswatch-4131563" title="将mkdocs主题更新为bootswatch 4.1.3（＃1563）" class="md-nav__link">
+    将mkdocs主题更新为bootswatch 4.1.3（＃1563）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11_2" title="版本1.1的其他更改和补充" class="md-nav__link">
+    版本1.1的其他更改和补充
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1042018-09-07" title="版本1.0.4（2018-09-07）" class="md-nav__link">
+    版本1.0.4（2018-09-07）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-103-2018-08-29" title="Version 1.0.3 (2018-08-29)" class="md-nav__link">
+    Version 1.0.3 (2018-08-29)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-102-2018-08-22" title="Version 1.0.2 (2018-08-22)" class="md-nav__link">
+    Version 1.0.2 (2018-08-22)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-101-2018-08-13" title="Version 1.0.1 (2018-08-13)" class="md-nav__link">
+    Version 1.0.1 (2018-08-13)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102018-08-03" title="版本1.0（2018-08-03）" class="md-nav__link">
+    版本1.0（2018-08-03）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10" title="版本1.0的主要补充" class="md-nav__link">
+    版本1.0的主要补充
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="页面，文件和导航的内部重构" class="md-nav__link">
+    页面，文件和导航的内部重构
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="向后不兼容的变化" class="md-nav__link">
+    向后不兼容的变化
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use_directory_urlsfalseurl" title="当use_directory_urls为'False`时，URL已经改变" class="md-nav__link">
+    当use_directory_urls为'False`时，URL已经改变
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagesnav" title="pages配置设置已重命名为nav" class="md-nav__link">
+    pages配置设置已重命名为nav
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#base_url" title="模板变量和base_url" class="md-nav__link">
+    模板变量和base_url
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#543" title="基于路径的设置与配置文件相关（＃543）" class="md-nav__link">
+    基于路径的设置与配置文件相关（＃543）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yaml1542" title="增加对YAML元数据的支持（＃1542）" class="md-nav__link">
+    增加对YAML元数据的支持（＃1542）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="重构搜索插件" class="md-nav__link">
+    重构搜索插件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theme_dir" title="theme_dir配置选项完全不推荐使用" class="md-nav__link">
+    theme_dir配置选项完全不推荐使用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10_1" title="版本1.0的其他更改和添加" class="md-nav__link">
+    版本1.0的其他更改和添加
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0175-2018-07-06" title="Version 0.17.5 (2018-07-06)" class="md-nav__link">
+    Version 0.17.5 (2018-07-06)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0174-2018-06-08" title="Version 0.17.4 (2018-06-08)" class="md-nav__link">
+    Version 0.17.4 (2018-06-08)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0173-2018-03-07" title="Version 0.17.3 (2018-03-07)" class="md-nav__link">
+    Version 0.17.3 (2018-03-07)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0172-2017-11-15" title="Version 0.17.2 (2017-11-15)" class="md-nav__link">
+    Version 0.17.2 (2017-11-15)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0171-2017-10-30" title="Version 0.17.1 (2017-10-30)" class="md-nav__link">
+    Version 0.17.1 (2017-10-30)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#01702017-10-19" title="版本0.17.0（2017-10-19）" class="md-nav__link">
+    版本0.17.0（2017-10-19）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0170" title="版本0.17.0的主要附加内容" class="md-nav__link">
+    版本0.17.0的主要附加内容
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-206" title="插件API。 （＃206）" class="md-nav__link">
+    插件API。 （＃206）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1164" title="主题定制。 （＃1164）" class="md-nav__link">
+    主题定制。 （＃1164）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1168" title="先前已弃用的模板变量已删除。 （＃1168）" class="md-nav__link">
+    先前已弃用的模板变量已删除。 （＃1168）
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="页面模板" class="md-nav__link">
+    页面模板
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="上下文变量" class="md-nav__link">
+    上下文变量
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-populated-extra_css-and-extra_javascript-fully-deprecated-986" title="Auto-Populated extra_css and extra_javascript Fully Deprecated. (#986)" class="md-nav__link">
+    Auto-Populated extra_css and extra_javascript Fully Deprecated. (#986)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-changes-and-additions-to-version-0170" title="Other Changes and Additions to Version 0.17.0" class="md-nav__link">
+    Other Changes and Additions to Version 0.17.0
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0163-2017-04-04" title="Version 0.16.3 (2017-04-04)" class="md-nav__link">
+    Version 0.16.3 (2017-04-04)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0162-2017-03-13" title="Version 0.16.2 (2017-03-13)" class="md-nav__link">
+    Version 0.16.2 (2017-03-13)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0161-2016-12-22" title="Version 0.16.1 (2016-12-22)" class="md-nav__link">
+    Version 0.16.1 (2016-12-22)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-016-2016-11-04" title="Version 0.16 (2016-11-04)" class="md-nav__link">
+    Version 0.16 (2016-11-04)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#major-additions-to-version-0160" title="Major Additions to Version 0.16.0" class="md-nav__link">
+    Major Additions to Version 0.16.0
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#template-variables-refactored-874" title="Template variables refactored. (#874)" class="md-nav__link">
+    Template variables refactored. (#874)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#page-context" title="Page Context" class="md-nav__link">
+    Page Context
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-context" title="Global Context" class="md-nav__link">
+    Global Context
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#increased-template-customization-607" title="Increased Template Customization. (#607)" class="md-nav__link">
+    Increased Template Customization. (#607)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto-populated-extra_css-and-extra_javascript-deprecated-986" title="Auto-Populated extra_css and extra_javascript Deprecated. (#986)" class="md-nav__link">
+    Auto-Populated extra_css and extra_javascript Deprecated. (#986)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-for-dirty-builds-990" title="Support for dirty builds. (#990)" class="md-nav__link">
+    Support for dirty builds. (#990)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stricter-directory-validation" title="Stricter Directory Validation" class="md-nav__link">
+    Stricter Directory Validation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-changes-and-additions-to-version-0160" title="Other Changes and Additions to Version 0.16.0" class="md-nav__link">
+    Other Changes and Additions to Version 0.16.0
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0153-2016-02-18" title="Version 0.15.3 (2016-02-18)" class="md-nav__link">
+    Version 0.15.3 (2016-02-18)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0152-2016-02-08" title="Version 0.15.2 (2016-02-08)" class="md-nav__link">
+    Version 0.15.2 (2016-02-08)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0151-2016-01-30" title="Version 0.15.1 (2016-01-30)" class="md-nav__link">
+    Version 0.15.1 (2016-01-30)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0150-2016-01-21" title="Version 0.15.0 (2016-01-21)" class="md-nav__link">
+    Version 0.15.0 (2016-01-21)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#major-additions-to-version-0150" title="Major Additions to Version 0.15.0" class="md-nav__link">
+    Major Additions to Version 0.15.0
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-support-for-installable-themes" title="Add support for installable themes" class="md-nav__link">
+    Add support for installable themes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-changes-and-additions-to-version-0150" title="Other Changes and Additions to Version 0.15.0" class="md-nav__link">
+    Other Changes and Additions to Version 0.15.0
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0140-2015-06-09" title="Version 0.14.0 (2015-06-09)" class="md-nav__link">
+    Version 0.14.0 (2015-06-09)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0133-2015-06-02" title="Version 0.13.3 (2015-06-02)" class="md-nav__link">
+    Version 0.13.3 (2015-06-02)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0132-2015-05-30" title="Version 0.13.2 (2015-05-30)" class="md-nav__link">
+    Version 0.13.2 (2015-05-30)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0131-2015-05-27" title="Version 0.13.1 (2015-05-27)" class="md-nav__link">
+    Version 0.13.1 (2015-05-27)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0130-2015-05-26" title="Version 0.13.0 (2015-05-26)" class="md-nav__link">
+    Version 0.13.0 (2015-05-26)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deprecations-to-version-0130" title="Deprecations to Version 0.13.0" class="md-nav__link">
+    Deprecations to Version 0.13.0
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deprecate-the-json-command" title="Deprecate the JSON command" class="md-nav__link">
+    Deprecate the JSON command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-the-pages-configuration" title="Change the pages configuration" class="md-nav__link">
+    Change the pages configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warn-users-about-the-removal-of-builtin-themes" title="Warn users about the removal of builtin themes" class="md-nav__link">
+    Warn users about the removal of builtin themes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#major-additions-to-version-0130" title="Major Additions to Version 0.13.0" class="md-nav__link">
+    Major Additions to Version 0.13.0
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#search" title="Search" class="md-nav__link">
+    Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-command-line-interface" title="New Command Line Interface" class="md-nav__link">
+    New Command Line Interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-extra-html-and-xml-files" title="Support Extra HTML and XML files" class="md-nav__link">
+    Support Extra HTML and XML files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-changes-and-additions-to-version-0130" title="Other Changes and Additions to Version 0.13.0" class="md-nav__link">
+    Other Changes and Additions to Version 0.13.0
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0122-2015-04-22" title="Version 0.12.2 (2015-04-22)" class="md-nav__link">
+    Version 0.12.2 (2015-04-22)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0121-2015-04-14" title="Version 0.12.1 (2015-04-14)" class="md-nav__link">
+    Version 0.12.1 (2015-04-14)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0120-2015-04-14" title="Version 0.12.0 (2015-04-14)" class="md-nav__link">
+    Version 0.12.0 (2015-04-14)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0111-2014-11-20" title="Version 0.11.1 (2014-11-20)" class="md-nav__link">
+    Version 0.11.1 (2014-11-20)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0110-2014-11-18" title="Version 0.11.0 (2014-11-18)" class="md-nav__link">
+    Version 0.11.0 (2014-11-18)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-0100-2014-10-29" title="Version 0.10.0 (2014-10-29)" class="md-nav__link">
+    Version 0.10.0 (2014-10-29)
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1">发行说明<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
 <hr />
-<h2 id="upgrading">Upgrading<a class="headerlink" href="#upgrading" title="Permanent link"></a></h2>
+<h2 id="_2">升级<a class="headerlink" href="#_2" title="Permanent link"></a></h2>
 <p>To upgrade MkDocs to the latest version, use pip:</p>
 <pre><code>pip install -U mkdocs
 </code></pre>
@@ -183,14 +1860,39 @@
 <pre><code>$ mkdocs --version
 mkdocs, version 1.0 from /path/to/mkdocs (Python 3.6)
 </code></pre>
-<h2 id="maintenance-team">Maintenance team<a class="headerlink" href="#maintenance-team" title="Permanent link"></a></h2>
+<h2 id="_3">维修团队<a class="headerlink" href="#_3" title="Permanent link"></a></h2>
 <p>The current and past members of the MkDocs team.</p>
 <ul>
 <li><a href="https://github.com/tomchristie/">@tomchristie</a></li>
 <li><a href="https://github.com/d0ugal/">@d0ugal</a></li>
 <li><a href="https://github.com/waylan/">@waylan</a></li>
 </ul>
-<h2 id="version-104-2018-09-07">Version 1.0.4 (2018-09-07)<a class="headerlink" href="#version-104-2018-09-07" title="Permanent link"></a></h2>
+<h2 id="11">版本1.1（<em>开发中</em>）<a class="headerlink" href="#11" title="Permanent link"></a></h2>
+<h3 id="11_1">版本1.1的主要补充<a class="headerlink" href="#11_1" title="Permanent link"></a></h3>
+<h4 id="lunrpyprebuild_index">支持Lunr.py作为<code>prebuild_index</code>引擎<a class="headerlink" href="#lunrpyprebuild_index" title="Permanent link"></a></h4>
+<p>Mkdocs now supports prebuilding indices using <a href="http://lunr.readthedocs.io/">Lunr.py</a>, a pure
+Python implementation of Lunr.js, allowing the user to avoid installing a
+NodeJS environment if so desired. For more information please read the
+<a href="../../user-guide/configuration/#prebuild_index"><code>prebuild_index</code> documentation</a>.</p>
+<h4 id="readthedocs5881374"><code>readthedocs</code>主题更新为上游（＃588和＃1374）<a class="headerlink" href="#readthedocs5881374" title="Permanent link"></a></h4>
+<p>The <code>readthedocs</code> theme now more closely matches the <a href="https://github.com/rtfd/sphinx_rtd_theme/">upstream</a> Sphinx theme
+(version 0.4.1). A number of new theme configuration settings were added which
+mirror the upstream configuration options. See the <a href="../../user-guide/styling-your-docs/#readthedocs">theme
+documentation</a> for details.</p>
+<h2 id="mkdocsbootswatch-4131563">将<code>mkdocs</code>主题更新为bootswatch 4.1.3（＃1563）<a class="headerlink" href="#mkdocsbootswatch-4131563" title="Permanent link"></a></h2>
+<p>The <code>mkdocs</code> theme now supports all the features of <a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/">Bootswatch 4.1</a>. Note that
+the <a href="https://getbootstrap.com/docs/4.1/components/navs/#pills-with-dropdowns">dropdowns</a> used in the navigation only support one level of nesting. If
+your global navigation uses more than one level, things will likely be broken.</p>
+<h3 id="11_2">版本1.1的其他更改和补充<a class="headerlink" href="#11_2" title="Permanent link"></a></h3>
+<ul>
+<li>Bugfix: Exclude Markdown files and READMEs from theme. (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/1766" title="GitHub Issue mkdocs/mkdocs #1766">#1766</a>).</li>
+<li>Bugfix: Account for encoded URLs (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/1670" title="GitHub Issue mkdocs/mkdocs #1670">#1670</a>).</li>
+<li>Bugfix: Ensure theme files do not override <code>docs_dir</code> files (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/1671" title="GitHub Issue mkdocs/mkdocs #1671">#1671</a>).</li>
+<li>Bugfix: Do not normalize URL fragments (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/1655" title="GitHub Issue mkdocs/mkdocs #1655">#1655</a>).</li>
+<li>Bugfix: Skip external URLs in sitemap.xml (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/1742" title="GitHub Issue mkdocs/mkdocs #1742">#1742</a>).</li>
+<li>Add canonical tag to <code>readthedocs</code> theme (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/1669" title="GitHub Issue mkdocs/mkdocs #1669">#1669</a>).</li>
+</ul>
+<h2 id="1042018-09-07">版本1.0.4（2018-09-07）<a class="headerlink" href="#1042018-09-07" title="Permanent link"></a></h2>
 <ul>
 <li>Bugfix: Ignore absolute links in Markdown (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/1621" title="GitHub Issue mkdocs/mkdocs #1621">#1621</a>).</li>
 </ul>
@@ -210,9 +1912,9 @@ mkdocs, version 1.0 from /path/to/mkdocs (Python 3.6)
 <li>Bugfix: Exclude <code>README.md</code> if <code>index.md</code> is present (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/1580" title="GitHub Issue mkdocs/mkdocs #1580">#1580</a>).</li>
 <li>Bugfix: Fix <code>readthedocs</code> theme navigation bug with homepage (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/1576" title="GitHub Issue mkdocs/mkdocs #1576">#1576</a>).</li>
 </ul>
-<h2 id="version-10-2018-08-03">Version 1.0 (2018-08-03)<a class="headerlink" href="#version-10-2018-08-03" title="Permanent link"></a></h2>
-<h3 id="major-additions-to-version-10">Major Additions to Version 1.0<a class="headerlink" href="#major-additions-to-version-10" title="Permanent link"></a></h3>
-<h4 id="internal-refactor-of-pages-files-and-navigation">Internal Refactor of Pages, Files, and Navigation<a class="headerlink" href="#internal-refactor-of-pages-files-and-navigation" title="Permanent link"></a></h4>
+<h2 id="102018-08-03">版本1.0（2018-08-03）<a class="headerlink" href="#102018-08-03" title="Permanent link"></a></h2>
+<h3 id="10">版本1.0的主要补充<a class="headerlink" href="#10" title="Permanent link"></a></h3>
+<h4 id="_4">页面，文件和导航的内部重构<a class="headerlink" href="#_4" title="Permanent link"></a></h4>
 <p>Internal handling of pages, files and navigation has been completely refactored.
 The changes included in the refactor are summarized below.</p>
 <ul>
@@ -238,10 +1940,10 @@ The changes included in the refactor are summarized below.</p>
   files not in the <code>docs_dir</code>, exclude files, redefine page URLs (i.e.
   implement extensionless URLs), or to manipulate files in various other ways.</li>
 </ul>
-<h5 id="backward-incompatible-changes">Backward Incompatible Changes<a class="headerlink" href="#backward-incompatible-changes" title="Permanent link"></a></h5>
+<h5 id="_5">向后不兼容的变化<a class="headerlink" href="#_5" title="Permanent link"></a></h5>
 <p>As part of the internal refactor, a number of backward incompatible changes have
 been introduced, which are summarized below.</p>
-<h6 id="urls-have-changed-when-use_directory_urls-is-false">URLS have changed when <code>use_directory_urls</code> is <code>False</code><a class="headerlink" href="#urls-have-changed-when-use_directory_urls-is-false" title="Permanent link"></a></h6>
+<h6 id="use_directory_urlsfalseurl">当<code>use_directory_urls</code>为'False`时，URL已经改变<a class="headerlink" href="#use_directory_urlsfalseurl" title="Permanent link"></a></h6>
 <p>Previously, all Markdown pages would be have their filenames altered to be index
 pages regardless of how the <a href="../../user-guide/configuration/#use_directory_urls">use_directory_urls</a> setting was configured.
 However, the path munging is only needed when <code>use_directory_urls</code> is set to
@@ -282,7 +1984,7 @@ As you can see below, the new URLs are much more sensible.</p>
 <p>Note that there has been no change to URLs or file paths when
 <code>use_directory_urls</code> is set to <code>True</code> (the default), except that MkDocs more
 consistently includes an ending slash on all internally generated URLs.</p>
-<h6 id="the-pages-configuration-setting-has-been-renamed-to-nav">The <code>pages</code> configuration setting has been renamed to <code>nav</code><a class="headerlink" href="#the-pages-configuration-setting-has-been-renamed-to-nav" title="Permanent link"></a></h6>
+<h6 id="pagesnav"><code>pages</code>配置设置已重命名为<code>nav</code><a class="headerlink" href="#pagesnav" title="Permanent link"></a></h6>
 <p>The <code>pages</code> configuration setting is deprecated and will issue a warning if set
 in the configuration file. The setting has been renamed <code>nav</code>. To update your
 configuration, simply rename the setting to <code>nav</code>. In other words, if your
@@ -302,7 +2004,7 @@ configuration looked like this:</p>
 no <code>nav</code> setting, the <code>pages</code> configuration will be copied to <code>nav</code> and a
 warning will be issued. However, in a future release, that may no longer happen.
 If both <code>pages</code> and <code>nav</code> are defined, the <code>pages</code> setting will be ignored.</p>
-<h6 id="template-variables-and-base_url">Template variables and <code>base_url</code><a class="headerlink" href="#template-variables-and-base_url" title="Permanent link"></a></h6>
+<h6 id="base_url">模板变量和<code>base_url</code><a class="headerlink" href="#base_url" title="Permanent link"></a></h6>
 <p>In previous versions of MkDocs some URLs expected the <a href="../../user-guide/custom-themes/#base_url">base_url</a> template
 variable to be prepended to the URL and others did not. That inconsistency has
 been removed in that no URLs are modified before being added to the template
@@ -339,7 +2041,7 @@ need to will be altered.</p>
 {% endfor %}
 </code></pre>
 
-<h4 id="path-based-settings-are-relative-to-configuration-file-543">Path Based Settings are Relative to Configuration File (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/543" title="GitHub Issue mkdocs/mkdocs #543">#543</a>)<a class="headerlink" href="#path-based-settings-are-relative-to-configuration-file-543" title="Permanent link"></a></h4>
+<h4 id="543">基于路径的设置与配置文件相关（＃543）<a class="headerlink" href="#543" title="Permanent link"></a></h4>
 <p>Previously any relative paths in the various configuration options were
 resolved relative to the current working directory. They are now resolved
 relative to the configuration file. As the documentation has always encouraged
@@ -353,7 +2055,7 @@ run commands from a location other than the project root.</p>
 
 <p>As previously, if no file is specified, MkDocs looks for a file named
 <code>mkdocs.yml</code> in the current working directory.</p>
-<h4 id="added-support-for-yaml-meta-data-1542">Added support for YAML Meta-Data (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/1542" title="GitHub Issue mkdocs/mkdocs #1542">#1542</a>)<a class="headerlink" href="#added-support-for-yaml-meta-data-1542" title="Permanent link"></a></h4>
+<h4 id="yaml1542">增加对YAML元数据的支持（＃1542）<a class="headerlink" href="#yaml1542" title="Permanent link"></a></h4>
 <p>Previously, MkDocs only supported MultiMarkdown style meta-data, which does not
 recognize different data types and is rather limited. MkDocs now also supports
 YAML style meta-data in Markdown documents. MkDocs relies on the the presence or
@@ -375,7 +2077,7 @@ Therefore, it is recommended that any complex meta-data make use of the YAML
 style (see the <a href="../../user-guide/writing-your-docs/#yaml-style-meta-data">YAML style meta-data documentation</a> for details). In fact, a
 future version of MkDocs may deprecate support for MultiMarkdown style
 meta-data.</p>
-<h4 id="refactor-search-plugin">Refactor Search Plugin<a class="headerlink" href="#refactor-search-plugin" title="Permanent link"></a></h4>
+<h4 id="_6">重构搜索插件<a class="headerlink" href="#_6" title="Permanent link"></a></h4>
 <p>The search plugin has been completely refactored to include support for the
 following features:</p>
 <ul>
@@ -390,12 +2092,12 @@ following features:</p>
 </ul>
 <p>Users can review the <a href="../../user-guide/configuration/#search">configuration options</a> available and theme
 authors should review how <a href="../../user-guide/custom-themes/#search_and_themes">search and themes</a> interact.</p>
-<h4 id="theme_dir-configuration-option-fully-deprecated"><code>theme_dir</code> Configuration Option fully Deprecated<a class="headerlink" href="#theme_dir-configuration-option-fully-deprecated" title="Permanent link"></a></h4>
+<h4 id="theme_dir"><code>theme_dir</code>配置选项完全不推荐使用<a class="headerlink" href="#theme_dir" title="Permanent link"></a></h4>
 <p>As of version 0.17, the <a href="../../user-guide/configuration/#custom_dir">custom_dir</a> option replaced the deprecated <code>theme_dir</code>
 option. If users had set the <code>theme_dir</code> option, MkDocs version 0.17 copied the
 value to the <code>theme.custom_dir</code> option and a warning was issued. As of version
 1.0, the value is no longer copied and an error is raised.</p>
-<h3 id="other-changes-and-additions-to-version-10">Other Changes and Additions to Version 1.0<a class="headerlink" href="#other-changes-and-additions-to-version-10" title="Permanent link"></a></h3>
+<h3 id="10_1">版本1.0的其他更改和添加<a class="headerlink" href="#10_1" title="Permanent link"></a></h3>
 <ul>
 <li>Keyboard shortcuts changed to not conflict with commonly used accessibility
   shortcuts (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/1502" title="GitHub Issue mkdocs/mkdocs #1502">#1502</a>.)</li>
@@ -452,9 +2154,9 @@ value to the <code>theme.custom_dir</code> option and a warning was issued. As o
   themes (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/1316" title="GitHub Issue mkdocs/mkdocs #1316">#1316</a>).</li>
 <li>Bugfix: Override <code>site_url</code> with <code>dev_addr</code> on local server (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/1317" title="GitHub Issue mkdocs/mkdocs #1317">#1317</a>).</li>
 </ul>
-<h2 id="version-0170-2017-10-19">Version 0.17.0 (2017-10-19)<a class="headerlink" href="#version-0170-2017-10-19" title="Permanent link"></a></h2>
-<h3 id="major-additions-to-version-0170">Major Additions to Version 0.17.0<a class="headerlink" href="#major-additions-to-version-0170" title="Permanent link"></a></h3>
-<h4 id="plugin-api-206">Plugin API. (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/206" title="GitHub Issue mkdocs/mkdocs #206">#206</a>)<a class="headerlink" href="#plugin-api-206" title="Permanent link"></a></h4>
+<h2 id="01702017-10-19">版本0.17.0（2017-10-19）<a class="headerlink" href="#01702017-10-19" title="Permanent link"></a></h2>
+<h3 id="0170">版本0.17.0的主要附加内容<a class="headerlink" href="#0170" title="Permanent link"></a></h3>
+<h4 id="api-206">插件API。 （＃206）<a class="headerlink" href="#api-206" title="Permanent link"></a></h4>
 <p>A new <a href="../../user-guide/plugins/">Plugin API</a> has been added to MkDocs which allows users to define their
 own custom behaviors. See the included documentation for a full explanation of
 the API.</p>
@@ -465,7 +2167,7 @@ search index is now written to <code>search/search_index.json</code> instead of
 then the <code>search</code> plugin will be included by default. See the
 <a href="../../user-guide/configuration/#plugins">configuration</a> documentation for information on overriding the
 default.</p>
-<h4 id="theme-customization-1164">Theme Customization. (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/1164" title="GitHub Issue mkdocs/mkdocs #1164">#1164</a>)<a class="headerlink" href="#theme-customization-1164" title="Permanent link"></a></h4>
+<h4 id="1164">主题定制。 （＃1164）<a class="headerlink" href="#1164" title="Permanent link"></a></h4>
 <p>Support had been added to provide theme specific customizations. Theme authors
 can define default options as documented in <a href="../../user-guide/custom-themes/#theme-configuration">Theme Configuration</a>. A theme can
 now inherit from another theme, define various static templates to be rendered,
@@ -491,15 +2193,15 @@ theme_dir: custom
 </code></pre>
 
 <p>See the <a href="../../user-guide/configuration/#theme">theme</a> configuration option documentation for details.</p>
-<h4 id="previously-deprecated-template-variables-removed-1168">Previously deprecated Template variables removed. (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/1168" title="GitHub Issue mkdocs/mkdocs #1168">#1168</a>)<a class="headerlink" href="#previously-deprecated-template-variables-removed-1168" title="Permanent link"></a></h4>
-<h5 id="page-template">Page Template<a class="headerlink" href="#page-template" title="Permanent link"></a></h5>
+<h4 id="1168">先前已弃用的模板变量已删除。 （＃1168）<a class="headerlink" href="#1168" title="Permanent link"></a></h4>
+<h5 id="_7">页面模板<a class="headerlink" href="#_7" title="Permanent link"></a></h5>
 <p>The primary entry point for page templates has been changed from <code>base.html</code> to
 <code>main.html</code>. This allows <code>base.html</code> to continue to exist while allowing users
 to override <code>main.html</code> and extend <code>base.html</code>. For version 0.16, <code>base.html</code>
 continued to work if no <code>main.html</code> template existed, but it raised a
 deprecation warning. In version 1.0, a build will fail if no <code>main.html</code>
 template exists.</p>
-<h5 id="context-variables">Context Variables<a class="headerlink" href="#context-variables" title="Permanent link"></a></h5>
+<h5 id="_8">上下文变量<a class="headerlink" href="#_8" title="Permanent link"></a></h5>
 <p>Page specific variable names in the template context have been refactored as
 defined in <a href="../../user-guide/custom-themes/#page">Custom Themes</a>. The
 old variable names issued a warning in version 0.16, but have been removed in
@@ -1029,7 +2731,7 @@ documentation.</p>
 <h3 id="other-changes-and-additions-to-version-0130">Other Changes and Additions to Version 0.13.0<a class="headerlink" href="#other-changes-and-additions-to-version-0130" title="Permanent link"></a></h3>
 <ul>
 <li>Add support for <a href="../../user-guide/configuration/#markdown_extensions">Markdown extension configuration options</a>. (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/435" title="GitHub Issue mkdocs/mkdocs #435">#435</a>)</li>
-<li>MkDocs now ships Python <a href="http://pythonwheels.com/">wheels</a>. (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/486" title="GitHub Issue mkdocs/mkdocs #486">#486</a>)</li>
+<li>MkDocs now ships Python <a href="https://pythonwheels.com/">wheels</a>. (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/486" title="GitHub Issue mkdocs/mkdocs #486">#486</a>)</li>
 <li>Only include the build date and MkDocs version on the homepage. (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/490" title="GitHub Issue mkdocs/mkdocs #490">#490</a>)</li>
 <li>Generate sitemaps for documentation builds. (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/436" title="GitHub Issue mkdocs/mkdocs #436">#436</a>)</li>
 <li>Add a clearer way to define nested pages in the configuration. (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/482" title="GitHub Issue mkdocs/mkdocs #482">#482</a>)</li>
@@ -1149,84 +2851,84 @@ documentation.</p>
 <li>Bugfix: Fix the mkdocs command creation under Windows. (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/122" title="GitHub Issue mkdocs/mkdocs #122">#122</a>)</li>
 <li>Bugfix: Correctly handle external <code>extra_javascript</code> and <code>extra_css</code>. (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/92" title="GitHub Issue mkdocs/mkdocs #92">#92</a>)</li>
 <li>Bugfix: Fixed favicon support. (<a class="gh-link gh-issue" href="https://github.com/mkdocs/mkdocs/issues/87" title="GitHub Issue mkdocs/mkdocs #87">#87</a>)</li>
-</ul></div>
-        </div>
+</ul>
+                
+                  
+                
+              
+              
+                
 
-        <footer class="col-md-12">
-            <hr>
-                <p>Copyright &copy; 2014 <a href="https://twitter.com/_tomchristie">Tom Christie</a>, Maintained by the <a href="/about/release-notes/#maintenance-team">MkDocs Team</a>.</p>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>
-            var base_url = "../..",
-                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
-        </script>
-        <script src="../../js/base.js" defer></script>
-        <script src="../../search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form role="form">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
+              
+            </article>
+          </div>
         </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../user-guide/plugins/" title="插件" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                插件
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../contributing/" title="贡献" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                贡献
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2014 <a href="https://twitter.com/_tomchristie">Tom Christie</a>, Maintained by the <a href="/about/release-notes/#maintenance-team">MkDocs Team</a>.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
     </div>
-</div>
-
-    </body>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.2ba8dec4.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
 </html>

@@ -1,155 +1,785 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <meta name="author" content="MkDocs Team">
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Project documentation with Markdown.">
+      
+      
         <link rel="canonical" href="https://www.mkdocs.org/user-guide/writing-your-docs/">
-        <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Writing Your Docs - MkDocs</title>
-        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-        <link href="../../css/extra.css" rel="stylesheet">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-        <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/django.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-            ga('create', 'UA-27795084-5', 'mkdocs.org');
-            ga('send', 'pageview');
-        </script> 
-    </head>
-
-    <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="../..">MkDocs</a>
-                </div>
-
-                <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li >
-                                <a href="../..">Home</a>
-                            </li>
-                            <li class="dropdown active">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li class="active">
-    <a href="./">Writing Your Docs</a>
-</li>
-                                    
-<li >
-    <a href="../styling-your-docs/">Styling Your Docs</a>
-</li>
-                                    
-<li >
-    <a href="../configuration/">Configuration</a>
-</li>
-                                    
-<li >
-    <a href="../deploying-your-docs/">Deploying Your Docs</a>
-</li>
-                                    
-<li >
-    <a href="../custom-themes/">Custom Themes</a>
-</li>
-                                    
-<li >
-    <a href="../plugins/">Plugins</a>
-</li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li >
-    <a href="../../about/release-notes/">Release Notes</a>
-</li>
-                                    
-<li >
-    <a href="../../about/contributing/">Contributing</a>
-</li>
-                                    
-<li >
-    <a href="../../about/license/">License</a>
-</li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li >
-                                <a rel="next" href="../..">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li >
-                                <a rel="prev" href="../styling-your-docs/">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/mkdocs/mkdocs/"><i class="fa fa-github"></i> GitHub</a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
+      
+      
+        <meta name="author" content="MkDocs Team">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.0">
+    
+    
+      
+        <title>编辑文档 - MkDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.01ccdecf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-27795084-5", "mkdocs.org")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#_1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://www.mkdocs.org" title="MkDocs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              MkDocs
+            </span>
+            <span class="md-header-nav__topic">
+              编辑文档
+            </span>
+          
         </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
 
-        <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#writing-your-docs">Writing your docs</a></li>
-            <li><a href="#file-layout">File layout</a></li>
-            <li><a href="#writing-with-markdown">Writing with Markdown</a></li>
+
+  
+
+<a href="https://github.com/mkdocs/mkdocs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="主页" class="md-tabs__link">
+        主页
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="用户指南" class="md-tabs__link md-tabs__link--active">
+          用户指南
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../about/release-notes/" title="关于" class="md-tabs__link">
+          关于
+        </a>
+      
+    </li>
+  
+
+      
     </ul>
-</div></div>
-                <div class="col-md-9" role="main">
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://www.mkdocs.org" title="MkDocs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    MkDocs
+  </label>
+  
+    <div class="md-nav__source">
+      
 
-<h1 id="writing-your-docs">Writing your docs<a class="headerlink" href="#writing-your-docs" title="Permanent link"></a></h1>
-<p>How to layout and write your Markdown source files.</p>
+
+  
+
+<a href="https://github.com/mkdocs/mkdocs/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      用户指南
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        用户指南
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        编辑文档
+      </label>
+    
+    <a href="./" title="编辑文档" class="md-nav__link md-nav__link--active">
+      编辑文档
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="文件布局" class="md-nav__link">
+    文件布局
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="索引页面" class="md-nav__link">
+    索引页面
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="配置页面和导航" class="md-nav__link">
+    配置页面和导航
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#markdown" title="用Markdown写作" class="md-nav__link">
+    用Markdown写作
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="内部链接" class="md-nav__link">
+    内部链接
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="链接到页面" class="md-nav__link">
+    链接到页面
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="链接到图像和媒体" class="md-nav__link">
+    链接到图像和媒体
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html" title="从原始HTML链接" class="md-nav__link">
+    从原始HTML链接
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meta-data" title="Meta-Data" class="md-nav__link">
+    Meta-Data
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yaml" title="YAML风格元数据" class="md-nav__link">
+    YAML风格元数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multimarkdown" title="MultiMarkdown样式元数据" class="md-nav__link">
+    MultiMarkdown样式元数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="表" class="md-nav__link">
+    表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="受控代码块" class="md-nav__link">
+    受控代码块
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../styling-your-docs/" title="化妆文档" class="md-nav__link">
+      化妆文档
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../configuration/" title="配置" class="md-nav__link">
+      配置
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deploying-your-docs/" title="部署文档" class="md-nav__link">
+      部署文档
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../custom-themes/" title="自定义主题" class="md-nav__link">
+      自定义主题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../plugins/" title="插件" class="md-nav__link">
+      插件
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      关于
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        关于
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/release-notes/" title="发行说明" class="md-nav__link">
+      发行说明
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/contributing/" title="贡献" class="md-nav__link">
+      贡献
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/license/" title="证书" class="md-nav__link">
+      证书
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="文件布局" class="md-nav__link">
+    文件布局
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" title="索引页面" class="md-nav__link">
+    索引页面
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" title="配置页面和导航" class="md-nav__link">
+    配置页面和导航
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#markdown" title="用Markdown写作" class="md-nav__link">
+    用Markdown写作
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" title="内部链接" class="md-nav__link">
+    内部链接
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" title="链接到页面" class="md-nav__link">
+    链接到页面
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" title="链接到图像和媒体" class="md-nav__link">
+    链接到图像和媒体
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html" title="从原始HTML链接" class="md-nav__link">
+    从原始HTML链接
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meta-data" title="Meta-Data" class="md-nav__link">
+    Meta-Data
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yaml" title="YAML风格元数据" class="md-nav__link">
+    YAML风格元数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multimarkdown" title="MultiMarkdown样式元数据" class="md-nav__link">
+    MultiMarkdown样式元数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" title="表" class="md-nav__link">
+    表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" title="受控代码块" class="md-nav__link">
+    受控代码块
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1">编辑文档<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
+<p>如何布局和编写Markdown源文件。</p>
 <hr />
-<h2 id="file-layout">File layout<a class="headerlink" href="#file-layout" title="Permanent link"></a></h2>
+<h2 id="_2">文件布局<a class="headerlink" href="#_2" title="Permanent link"></a></h2>
 <p>Your documentation source should be written as regular Markdown files (see
 <a href="#writing-with-markdown">Writing with Markdown</a> below), and placed in the
-<a href="../configuration/#docs_dir">documentation directory</a>. By default, this directory
+<a href="../configuration/#docs_dir">documentation directory</a>.
+By default, this directory
 will be named <code>docs</code> and will exist at the top level of your project, alongside
 the <code>mkdocs.yml</code> configuration file.</p>
 <p>The simplest project you can create will look something like this:</p>
@@ -158,9 +788,11 @@ docs/
     index.md
 </code></pre>
 
-<p>By convention your project homepage should always be named <code>index</code>. Any of the
+<p>By convention your project homepage should always be named <code>index</code>.
+Any of the
 following extensions may be used for your Markdown source files: <code>markdown</code>,
-<code>mdown</code>, <code>mkdn</code>, <code>mkd</code>, <code>md</code>. All Markdown files included in your documentation
+<code>mdown</code>, <code>mkdn</code>, <code>mkd</code>, <code>md</code>.
+All Markdown files included in your documentation
 directory will be rendered in the built site regardless of any settings.</p>
 <p>You can also create multi-page documentation, by creating several Markdown
 files:</p>
@@ -171,15 +803,14 @@ docs/
     license.md
 </code></pre>
 
-<p>The file layout you use determines the URLs that are used for the generated
-pages. Given the above layout, pages would be generated for the following URLs:</p>
+<p>您使用的文件布局确定用于生成的页面的URL。
+鉴于上述布局，将为以下URL生成页面：</p>
 <pre><code class="no-highlight">/
 /about/
 /license/
 </code></pre>
 
-<p>You can also include your Markdown files in nested directories if that better
-suits your documentation layout.</p>
+<p>如果更适合您的文档布局，您还可以在嵌套目录中包含Markdown文件。</p>
 <pre><code class="no-highlight">docs/
     index.md
     user-guide/getting-started.md
@@ -187,63 +818,44 @@ suits your documentation layout.</p>
     license.md
 </code></pre>
 
-<p>Source files inside nested directories will cause pages to be generated with
-nested URLs, like so:</p>
+<p>嵌套目录中的源文件将导致使用嵌套URL生成页面，如下所示：</p>
 <pre><code class="no-highlight">/
 /user-guide/getting-started/
 /user-guide/configuration-options/
 /license/
 </code></pre>
 
-<h3 id="index-pages">Index pages<a class="headerlink" href="#index-pages" title="Permanent link"></a></h3>
-<p>When a directory is requested, by default, most web servers will return an index
-file (usually named <code>index.html</code>) contained within that directory if one exists.
-For that reason, the homepage in all of the examples above has been named
-<code>index.md</code>, which MkDocs will render to <code>index.html</code> when building the site.</p>
-<p>Many repository hosting sites provide special treatment for README files by
-displaying the contents of the README file when browsing the contents of a
-directory. Therefore, MkDocs will allow you to name your index pages as
-<code>README.md</code> instead of <code>index.md</code>. In that way, when users are browsing your
-source code, the repository host can display the index page of that directory as
-it is a README file. However, when MkDocs renders your site, the file will be
-renamed to <code>index.html</code> so that the server will serve it as a proper index file.</p>
-<p>If both an <code>index.md</code> file and a <code>README.md</code> file are found in the same
-directory, then the <code>index.md</code> file is used and the <code>README.md</code> file is
-ignored.</p>
-<h3 id="configure-pages-and-navigation">Configure Pages and Navigation<a class="headerlink" href="#configure-pages-and-navigation" title="Permanent link"></a></h3>
-<p>The <a href="../configuration/#nav">nav</a> configuration setting in your <code>mkdocs.yml</code> file
-defines which pages are included in the global site navigation menu as well as
-the structure of that menu. If not provided, the navigation will be
-automatically created by discovering all the Markdown files in the
-<a href="../configuration/#docs_dir">documentation directory</a>. An automatically created
-navigation configuration will always be sorted alphanumerically by file name
-(except that index files will always be listed first within a sub-section). You
-will need to manually define your navigation configuration if you would like
-your navigation menu sorted differently.</p>
-<p>A simple navigation configuration looks like this:</p>
+<h3 id="_3">索引页面<a class="headerlink" href="#_3" title="Permanent link"></a></h3>
+<p>当请求目录时，默认情况下，大多数Web服务器将返回该目录中包含的索引文件（通常名为<code>index.html</code>）（如果存在）。
+因此，上面所有示例中的主页都被命名为<code>index.md</code>，MkDocs在构建站点时将呈现给<code>index.html</code>。</p>
+<p>许多存储库托管站点通过在浏览目录内容时显示README文件的内容来为README文件提供特殊处理。
+因此，MkDocs允许您将索引页面命名为<code>README.md</code>而不是<code>index.md</code>。
+这样，当用户浏览您的源代码时，存储库主机可以显示该目录的索引页，因为它是README文件。
+但是，当MkDocs渲染您的站点时，该文件将重命名为<code>index.html</code>，以便服务器将其作为正确的索引文件提供。</p>
+<p>如果在同一目录中找到<code>index.md</code>文件和<code>README.md</code>文件，则使用<code>index.md</code>文件并忽略<code>README.md</code>文件。</p>
+<h3 id="_4">配置页面和导航<a class="headerlink" href="#_4" title="Permanent link"></a></h3>
+<p><code>mkdocs.yml</code>文件中的<a href="../configuration/#nav">nav</a>（configuration.md＃nav）配置设置定义哪些页面包含在全局站点导航菜单中以及该菜单的结构。
+如果未提供，将通过发现中的所有Markdown文件自动创建导航[文档目录]（configuration.md #docs_dir）。
+自动创建的导航配置将始终按字母数字按字母顺序排序（除了索引文件将始终首先列在子节中）。
+如果您希望导航菜单的排序方式不同，则需要手动定义导航配置。</p>
+<p>简单的导航配置如下所示:</p>
 <pre><code class="no-highlight">nav:
 - 'index.md'
 - 'about.md'
 </code></pre>
 
-<p>All paths in the navigation configuration must be relative to the <code>docs_dir</code>
-configuration option. If that option is set to the default value, <code>docs</code>, the
-source files for the above configuration would be located at <code>docs/index.md</code> and
-<code>docs/about.md</code>.</p>
-<p>The above example will result in two navigation items being created at the top
-level and with their titles inferred from the contents of the file (or the
-filename if no title is defined within the file). To define a custom title for
-the pages, the title can be added before the filename.</p>
+<p>导航配置中的所有路径必须相对于<code>docs_dir</code>配置选项。
+如果该选项设置为默认值<code>docs</code>，则上述配置的源文件将位于<code>docs / index.md</code>和<code>docs / about.md</code>。</p>
+<p>上面的示例将导致在顶层创建两个导航项，并根据文件内容（或文件中未定义标题的文件名）推断其标题。
+要为页面定义自定义标题，可以在文件名之前添加标题。</p>
 <pre><code class="no-highlight">nav:
 - Home: 'index.md'
 - About: 'about.md'
 </code></pre>
 
-<p>Note that if a title is defined for a page in the navigation, that title will be
-used throughout the site for that page and will override any title defined
-within the page itself.</p>
-<p>Navigation sub-sections can be created by listing related pages together under a
-section title. For example:</p>
+<p>请注意，如果为导航中的页面定义了标题，则该标题将在整个站点中用于该页面，并将覆盖页面本身中定义的任何标题。</p>
+<p>可以通过在节标题下将相关页面列在一起来创建导航子节。</p>
+<p>例如：</p>
 <pre><code class="no-highlight">nav:
 - Home: 'index.md'
 - User Guide:
@@ -254,21 +866,18 @@ section title. For example:</p>
     - 'Release Notes': 'release-notes.md'
 </code></pre>
 
-<p>With the above configuration we have three top level items: "Home", "User Guide"
-and "About." "Home" is a link to the homepage for the site. Under the "User
-Guide" section two pages are listed: "Writing your docs" and "Styling your
-docs." Under the "About" section two more pages are listed: "License" and
-"Release Notes."</p>
-<p>Note that a section cannot have a page assigned to it. Sections are only
-containers for child pages and sub-sections. You may nest sections as deeply as
-you like. However, be careful that you don't make it too difficult for your
-users to navigate through the site navigation by over-complicating the nesting.
-While sections may mirror your directory structure, they do not have to.</p>
-<p>Any pages not listed in your navigation configuration will still be rendered and
-included with the built site, however, they will not be linked from the global
-navigation and will not be included in the <code>previous</code> and <code>next</code> links. Such
-pages will be "hidden" unless linked to directly.</p>
-<h2 id="writing-with-markdown">Writing with Markdown<a class="headerlink" href="#writing-with-markdown" title="Permanent link"></a></h2>
+<p>通过上述配置，我们有三个顶级项目：“主页”，“用户指南”和“关于”。
+“主页”是指向该网站主页的链接。
+在“用户指南”部分下面列出了两个页面：“编写文档”和“样式化文档”。
+在“关于”部分下面列出了另外两个页面：“许可证”和“发行说明”。</p>
+<p>请注意，部分不能分配页面。
+节只是子页面和子节的容器。
+您可以根据需要深入嵌套部分。
+但是，请注意不要让用户通过过度复杂的嵌套来浏览网站导航太困难。
+虽然部分可能会镜像您的目录结构，但它们不必。</p>
+<p>导航配置中未列出的任何页面仍将呈现并包含在构建的站点中，但是，它们不会从全局导航链接，也不会包含在“previous”和“next”链接中。
+除非直接链接，否则此类页面将被“隐藏”。</p>
+<h2 id="markdown">用Markdown写作<a class="headerlink" href="#markdown" title="Permanent link"></a></h2>
 <p>MkDocs pages must be authored in <a href="https://daringfireball.net/projects/markdown/">Markdown</a>, a lightweight markup language
 which results in easy-to-read, easy-to-write plain text documents that can be
 converted to valid HTML documents in a predictable manner.</p>
@@ -277,14 +886,16 @@ Python-Markdown is almost completely compliant with the <a href="https://daringf
 implementation</a>, although there are a few very minor <a href="https://python-markdown.github.io/#differences">differences</a>.</p>
 <p>In addition to the base Markdown <a href="https://daringfireball.net/projects/markdown/syntax">syntax</a> which is common across all Markdown
 implementations, MkDocs includes support for extending the Markdown syntax with
-Python-Markdown <a href="https://python-markdown.github.io/extensions/">extensions</a>. See the MkDocs' <a href="../configuration/#markdown_extensions">markdown_extensions</a>
+Python-Markdown <a href="https://python-markdown.github.io/extensions/">extensions</a>.
+See the MkDocs' <a href="../configuration/#markdown_extensions">markdown_extensions</a>
 configuration setting for details on how to enable extensions.</p>
 <p>MkDocs includes some extensions by default, which are highlighted below.</p>
-<h3 id="internal-links">Internal links<a class="headerlink" href="#internal-links" title="Permanent link"></a></h3>
+<h3 id="_5">内部链接<a class="headerlink" href="#_5" title="Permanent link"></a></h3>
 <p>MkDocs allows you to interlink your documentation by using regular Markdown
-<a href="https://daringfireball.net/projects/markdown/syntax#link">links</a>. However, there are a few additional benefits to formatting those links
+<a href="https://daringfireball.net/projects/markdown/syntax#link">links</a>.
+However, there are a few additional benefits to formatting those links
 specifically for MkDocs as outlined below.</p>
-<h4 id="linking-to-pages">Linking to pages<a class="headerlink" href="#linking-to-pages" title="Permanent link"></a></h4>
+<h4 id="_6">链接到页面<a class="headerlink" href="#_6" title="Permanent link"></a></h4>
 <p>When linking between pages in the documentation you can simply use the regular
 Markdown <a href="https://daringfireball.net/projects/markdown/syntax#link">linking</a> syntax, including the <em>relative path</em> to the Markdown
 document you wish to link to.</p>
@@ -293,30 +904,48 @@ document you wish to link to.</p>
 
 <p>When the MkDocs build runs, these Markdown links will automatically be
 transformed into an HTML hyperlink to the appropriate HTML page.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Using absolute paths with links is not officially supported.</p>
+</div>
+<p>Relative paths
+    are adjusted by MkDocs to ensure they are always relative to the page.
+Absolute
+    paths are not modified at all.
+This means that your links using absolute paths
+    might work fine in your local environment but they might break once you deploy
+    them to your production server.</p>
 <p>If the target documentation file is in another directory you'll need to make
 sure to include any relative directory path in the link.</p>
 <pre><code class="no-highlight">Please see the [project license](../about/license.md) for further details.
 </code></pre>
 
 <p>The <a href="https://python-markdown.github.io/extensions/toc/">toc</a> extension is used by MkDocs to generate an ID for every header in your
-Markdown documents. You can use that ID to link to a section within a target
-document by using an anchor link. The generated HTML will correctly transform
+Markdown documents.
+You can use that ID to link to a section within a target
+document by using an anchor link.
+The generated HTML will correctly transform
 the path portion of the link, and leave the anchor portion intact.</p>
 <pre><code class="no-highlight">Please see the [project license](about.md#license) for further details.
 </code></pre>
 
-<p>Note that IDs are created from the text of a header. All text is converted to
+<p>Note that IDs are created from the text of a header.
+All text is converted to
 lowercase and any disallowed characters, including white-space, are converted to
-dashes. Consecutive dashes are then reduced to a single dash.</p>
+dashes.
+Consecutive dashes are then reduced to a single dash.</p>
 <p>There are a few configuration settings provided by the toc extension which you
 can set in your <code>mkdocs.yml</code> configuration file to alter the default behavior:</p>
 <dl>
 <dt><code>permalink</code>:</dt>
 <dd>
-<p>Generate permanent links at the end of each header. Default: <code>False</code>.</p>
+<p>Generate permanent links at the end of each header.
+Default: <code>False</code>.</p>
 <p>When set to True the paragraph symbol (&para; or <code>&amp;para;</code>) is used as the
-link text. When set to a string, the provided string is used as the link
-text. For example, to use the hash symbol (<code>#</code>) instead, do:</p>
+link text.
+When set to a string, the provided string is used as the link
+text.
+For example, to use the hash symbol (<code>#</code>) instead, do:</p>
 <pre><code>markdown_extensions:
     - toc:
         permalink: "#"
@@ -324,23 +953,28 @@ text. For example, to use the hash symbol (<code>#</code>) instead, do:</p>
 </dd>
 <dt><code>baselevel</code>:</dt>
 <dd>
-<p>Base level for headers. Default: <code>1</code>.</p>
+<p>Base level for headers.
+Default: <code>1</code>.</p>
 <p>This setting allows the header levels to be automatically adjusted to fit
-within the hierarchy of your HTML templates. For example, if the Markdown
+within the hierarchy of your HTML templates.
+For example, if the Markdown
 text for a page should not contain any headers higher than level 2 (<code>&lt;h2&gt;</code>),
 do:</p>
 <pre><code>markdown_extensions:
     - toc:
         baselevel: 2
 </code></pre>
-<p>Then any headers in your document would be increased by 1. For example, the
+<p>Then any headers in your document would be increased by 1.
+For example, the
 header <code># Header</code> would be rendered as a level 2 header (<code>&lt;h2&gt;</code>) in the HTML
 output.</p>
 </dd>
 <dt><code>separator</code>:</dt>
 <dd>
-<p>Word separator. Default: <code>-</code>.</p>
-<p>Character which replaces white-space in generated IDs. If you prefer
+<p>Word separator.
+Default: <code>-</code>.</p>
+<p>Character which replaces white-space in generated IDs.
+If you prefer
 underscores, then do:</p>
 <pre><code>markdown_extensions:
     - toc:
@@ -358,10 +992,11 @@ option.</p>
         separator: &quot;_&quot;
 </code></pre>
 
-<h4 id="linking-to-images-and-media">Linking to images and media<a class="headerlink" href="#linking-to-images-and-media" title="Permanent link"></a></h4>
+<h4 id="_7">链接到图像和媒体<a class="headerlink" href="#_7" title="Permanent link"></a></h4>
 <p>As well as the Markdown source files, you can also include other file types in
 your documentation, which will be copied across when generating your
-documentation site. These might include images and other media.</p>
+documentation site.
+These might include images and other media.</p>
 <p>For example, if your project documentation needed to include a <a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/">GitHub pages
 CNAME file</a> and a PNG formatted screenshot image then your file layout might
 look as follows:</p>
@@ -386,32 +1021,42 @@ regular Markdown image syntaxes:</p>
 
 <p>Your image will now be embedded when you build the documentation, and should
 also be previewed if you're working on the documentation with a Markdown editor.</p>
-<h4 id="linking-from-raw-html">Linking from raw HTML<a class="headerlink" href="#linking-from-raw-html" title="Permanent link"></a></h4>
+<h4 id="html">从原始HTML链接<a class="headerlink" href="#html" title="Permanent link"></a></h4>
 <p>Markdown allows document authors to fall back to raw HTML when the Markdown
-syntax does not meets the author's needs. MkDocs does not limit Markdown in this
-regard. However, as all raw HTML is ignored by the Markdown parser, MkDocs is
-not able to validate or convert links contained in raw HTML. When including
+syntax does not meets the author's needs.
+MkDocs does not limit Markdown in this
+regard.
+However, as all raw HTML is ignored by the Markdown parser, MkDocs is
+not able to validate or convert links contained in raw HTML.
+When including
 internal links within raw HTML, you will need to manually format the link
 appropriately for the rendered document.</p>
 <h3 id="meta-data">Meta-Data<a class="headerlink" href="#meta-data" title="Permanent link"></a></h3>
 <p>MkDocs includes support for both YAML and MultiMarkdown style meta-data (often
-called front-matter). Meta-data consists of a series of keywords and values
+called front-matter).
+Meta-data consists of a series of keywords and values
 defined at the beginning of a Markdown document, which are stripped from the
-document prior to it being processing by Python-Markdown. The key/value pairs
-are passed by MkDocs to the page template. Therefore, if a theme includes
+document prior to it being processing by Python-Markdown.
+The key/value pairs
+are passed by MkDocs to the page template.
+Therefore, if a theme includes
 support, the values of any keys can be displayed on the page or used to control
-the page rendering. See your theme's documentation for information about which
+the page rendering.
+See your theme's documentation for information about which
 keys may be supported, if any.</p>
 <p>In addition to displaying information in a template, MkDocs includes support for
 a few predefined meta-data keys which can alter the behavior of MkDocs for that
-specific page. The following keys are supported:</p>
+specific page.
+The following keys are supported:</p>
 <dl>
 <dt><code>template</code>:</dt>
 <dd>
 <p>The template to use with the current page.</p>
 <p>By default, MkDocs uses the <code>main.html</code> template of a theme to render
-Markdown pages. You can use the <code>template</code> meta-data key to define a
-different template file for that specific page. The template file must be
+Markdown pages.
+You can use the <code>template</code> meta-data key to define a
+different template file for that specific page.
+The template file must be
 available on the path(s) defined in the theme's environment.</p>
 </dd>
 <dt><code>title</code>:</dt>
@@ -419,21 +1064,26 @@ available on the path(s) defined in the theme's environment.</p>
 <p>The "title" to use for the document.</p>
 <p>MkDocs will attempt to determine the title of a document in the following
 ways, in order:</p>
-<ol>
-<li>A title defined in the <a href="../configuration/#nav">nav</a> configuration setting for a document.</li>
-<li>A title defined in the <code>title</code> meta-data key of a document.</li>
-<li>A level 1 Markdown header on the first line of the document body.</li>
-<li>The filename of a document.</li>
-</ol>
+<p>1.
+A title defined in the <a href="../configuration/#nav">nav</a> configuration setting for a document.
+2.
+A title defined in the <code>title</code> meta-data key of a document.
+3.
+A level 1 Markdown header on the first line of the document body.
+4.
+The filename of a document.</p>
 <p>Upon finding a title for a page, MkDoc does not continue checking any
 additional sources in the above list.</p>
 </dd>
 </dl>
-<h4 id="yaml-style-meta-data">YAML Style Meta-Data<a class="headerlink" href="#yaml-style-meta-data" title="Permanent link"></a></h4>
+<h4 id="yaml">YAML风格元数据<a class="headerlink" href="#yaml" title="Permanent link"></a></h4>
 <p>YAML style meta-data consists of <a href="http://yaml.org">YAML</a> key/value pairs wrapped in YAML style
-deliminators to mark the start and/or end of the meta-data. The first line of
-a document must be <code>---</code>. The meta-data ends at the first line containing an
-end deliminator (either <code>---</code> or <code>...</code>). The content between the deliminators is
+deliminators to mark the start and/or end of the meta-data.
+The first line of
+a document must be <code>---</code>.
+The meta-data ends at the first line containing an
+end deliminator (either <code>---</code> or <code>...</code>).
+The content between the deliminators is
 parsed as <a href="http://yaml.org">YAML</a>.</p>
 <pre><code class="no-highlight">---
 title: My Document
@@ -447,19 +1097,21 @@ some_url: https://example.com
 This is the first paragraph of the document.
 </code></pre>
 
-<p>YAML is able to detect data types. Therefore, in the above example, the values
+<p>YAML is able to detect data types.
+Therefore, in the above example, the values
 of <code>title</code>, <code>summary</code> and <code>some_url</code> are strings, the value of <code>authors</code> is a
-list of strings and the value of <code>date</code> is a <code>datetime.date</code> object. Note that
+list of strings and the value of <code>date</code> is a <code>datetime.date</code> object.
+Note that
 the YAML keys are case sensitive and MkDocs expects keys to be all lowercase.
 The top level of the YAML must be a collection of key/value pairs, which results
-in a Python <code>dict</code> being returned. If any other type is returned or the YAML
+in a Python <code>dict</code> being returned.
+If any other type is returned or the YAML
 parser encounters an error, then MkDocs does not recognize the section as
 meta-data, the page's <code>meta</code> attribute will be empty, and the section is not
 removed from the document.</p>
-<h4 id="multimarkdown-style-meta-data">MultiMarkdown Style Meta-Data<a class="headerlink" href="#multimarkdown-style-meta-data" title="Permanent link"></a></h4>
-<p>MultiMarkdown style meta-data uses a format first introduced by the
-<a href="http://fletcherpenney.net/MultiMarkdown_Syntax_Guide#metadata">MultiMarkdown</a> project. The data consists of a series of keywords and values
-defined at the beginning of a Markdown document, like this:</p>
+<h4 id="multimarkdown">MultiMarkdown样式元数据<a class="headerlink" href="#multimarkdown" title="Permanent link"></a></h4>
+<p>MultiMarkdown样式元数据使用<a href="http://fletcherpenney.net/MultiMarkdown_Syntax_Guide#metadata">MultiMarkdown</a>项目首先引入的格式。
+该数据由Markdown文档开头定义的一系列关键字和值组成，如下所示：</p>
 <pre><code class="no-highlight">Title:   My Document
 Summary: A brief description of my document.
 Authors: Waylan Limberg
@@ -468,36 +1120,32 @@ Date:    January 23, 2018
 blank-value:
 some_url: https://example.com
 
-This is the first paragraph of the document.
+这是该文件的第一段。
 </code></pre>
 
-<p>The keywords are case-insensitive and may consist of letters, numbers,
-underscores and dashes and must end with a colon. The values consist of anything
-following the colon on the line and may even be blank.</p>
-<p>If a line is indented by 4 or more spaces, that line is assumed to be an
-additional line of the value for the previous keyword. A keyword may have as
-many lines as desired. All lines are joined into a single string.</p>
-<p>The first blank line ends all meta-data for the document. Therefore, the first
-line of a document must not be blank.</p>
+<p>关键字不区分大小写，可以包含字母，数字，下划线和短划线，并且必须以冒号结尾。
+值由行上冒号后面的任何内容组成，甚至可以为空。</p>
+<p>如果一行缩进4个或更多空格，则该行被假定为前一个关键字的值的附加行。
+关键字可以包含所需的行数。
+所有行都连接成一个字符串。</p>
+<p>第一个空白行结束文档的所有元数据。
+因此，文档的第一行不能为空。</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>MkDocs does not support YAML style deliminators (<code>---</code> or <code>...</code>) for
-MultiMarkdown style meta-data. In fact, MkDocs relies on the the presence or
-absence of the deliminators to determine whether YAML style meta-data or
-MultiMarkdown style meta-data is being used. If the deliminators are
-detected, but the content between the deliminators is not valid YAML
-meta-data, MkDocs does not attempt to parse the content as MultiMarkdown
-style meta-data.</p>
+<p>对于MultiMarkdown样式的元数据，MkDocs不支持YAML样式的分隔符（<code>---</code>或```）。
+实际上，MkDocs依赖于分隔符的存在与否来确定是否正在使用YAML样式的元数据或MultiMarkdown样式的元数据。
+如果检测到分隔符，但是分隔符之间的内容不是有效的YAML元数据，则MkDocs不会尝试将内容解析为MultiMarkdown样式的元数据。</p>
 </div>
-<h3 id="tables">Tables<a class="headerlink" href="#tables" title="Permanent link"></a></h3>
+<h3 id="_8">表<a class="headerlink" href="#_8" title="Permanent link"></a></h3>
 <p>The <a href="https://python-markdown.github.io/extensions/tables/">tables</a> extension adds a basic table syntax to Markdown which is popular
-across multiple implementations. The syntax is rather simple and is generally
+across multiple implementations.
+The syntax is rather simple and is generally
 only useful for simple tabular data.</p>
 <p>A simple table looks like this:</p>
-<pre><code class="no-highlight">First Header | Second Header | Third Header
------------- | ------------- | ------------
-Content Cell | Content Cell  | Content Cell
-Content Cell | Content Cell  | Content Cell
+<pre><code class="no-highlight">| First Header | Second Header | Third Header |
+| ------------ | ------------- | ------------ |
+| Content Cell | Content Cell  | Content Cell |
+| Content Cell | Content Cell  | Content Cell |
 </code></pre>
 
 <p>If you wish, you can add a leading and tailing pipe to each line of the table:</p>
@@ -508,22 +1156,22 @@ Content Cell | Content Cell  | Content Cell
 </code></pre>
 
 <p>Specify alignment for each column by adding colons to separator lines:</p>
-<pre><code class="no-highlight">First Header | Second Header | Third Header
-:----------- |:-------------:| -----------:
-Left         | Center        | Right
-Left         | Center        | Right
+<pre><code class="no-highlight">| First Header | Second Header | Third Header |
+| :----------- | :-----------: | -----------: |
+| Left         |    Center     |        Right |
+| Left         |    Center     |        Right |
 </code></pre>
 
 <p>Note that table cells cannot contain any block level elements and cannot contain
-multiple lines of text. They can, however, include inline Markdown as defined in
+multiple lines of text.
+They can, however, include inline Markdown as defined in
 Markdown's <a href="https://daringfireball.net/projects/markdown/syntax">syntax</a> rules.</p>
-<p>Additionally, a table must be surrounded by blank lines. There must be a blank
+<p>Additionally, a table must be surrounded by blank lines.
+There must be a blank
 line before and after the table.</p>
-<h3 id="fenced-code-blocks">Fenced code blocks<a class="headerlink" href="#fenced-code-blocks" title="Permanent link"></a></h3>
-<p>The <a href="https://python-markdown.github.io/extensions/fenced_code_blocks/">fenced code blocks</a> extension adds an alternate method of defining code
-blocks without indentation.</p>
-<p>The first line should contain 3 or more backtick (<code>`</code>) characters, and the
-last line should contain the same number of backtick characters (<code>`</code>):</p>
+<h3 id="_9">受控代码块<a class="headerlink" href="#_9" title="Permanent link"></a></h3>
+<p><a href="https://python-markdown.github.io/extensions/fenced_code_blocks/">fenced code blocks</a>扩展添加了一种定义代码块的替代方法，无需缩进。</p>
+<p>第一行应包含3个或更多反引号（````）字符，最后一行应包含相同数量的反引号字符（`````）:</p>
 <pre><code class="no-highlight">```
 Fenced code blocks are like Standard
 Markdown’s regular code blocks, except that
@@ -533,93 +1181,91 @@ code block.
 ```
 </code></pre>
 
-<p>With this approach, the language can optionally be specified on the first line
-after the backticks which informs any syntax highlighters of the language used:</p>
+<p>使用这种方法，可以选择在反引号后的第一行指定语言，该反引号通知使用的语言的任何语法高亮显示器:</p>
 <pre><code class="no-highlight">```python
 def fn():
     pass
 ```
 </code></pre>
 
-<p>Note that fenced code blocks can not be indented. Therefore, they cannot be
-nested inside list items, blockquotes, etc.</p></div>
-        </div>
+<p>请注意，受限制的代码块不能缩进。因此，它们不能嵌套在列表项，块引用等内。</p>
+                
+                  
+                
+              
+              
+                
 
-        <footer class="col-md-12">
-            <hr>
-                <p>Copyright &copy; 2014 <a href="https://twitter.com/_tomchristie">Tom Christie</a>, Maintained by the <a href="/about/release-notes/#maintenance-team">MkDocs Team</a>.</p>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>
-            var base_url = "../..",
-                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
-        </script>
-        <script src="../../js/base.js" defer></script>
-        <script src="../../search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form role="form">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
+              
+            </article>
+          </div>
         </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../.." title="主页" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                主页
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../styling-your-docs/" title="化妆文档" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                化妆文档
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="help shortcut"><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td class="next shortcut"><kbd>n</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td class="prev shortcut"><kbd>p</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td class="search shortcut"><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2014 <a href="https://twitter.com/_tomchristie">Tom Christie</a>, Maintained by the <a href="/about/release-notes/#maintenance-team">MkDocs Team</a>.
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
     </div>
-</div>
-
-    </body>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.2ba8dec4.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
 </html>
