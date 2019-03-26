@@ -1,4 +1,4 @@
-# Custom themes
+# 自定义主题
 
 A guide to creating and distributing custom themes.
 
@@ -20,7 +20,7 @@ and their usage.
 ## Creating a custom theme
 
 The bare minimum required for a custom theme is a `main.html` [Jinja2 template]
-file which is placed in a directory that is *not* a child of the [docs_dir].
+file which is placed in a directory that is _not_ a child of the [docs_dir].
 Within `mkdocs.yml`, set the theme.[custom_dir] option to the path of the
 directory containing `main.html`. The path should be relative to the
 configuration file. For example, given this example project layout:
@@ -41,7 +41,7 @@ directory:
 ```yaml
 theme:
     name: null
-    custom_dir: 'custom_theme/'
+    custom_dir: "custom_theme/"
 ```
 
 !!! Note
@@ -61,7 +61,7 @@ theme:
 [styling your docs]: ./styling-your-docs.md#using-the-theme-custom_dir
 [custom_dir]: ./configuration.md#custom_dir
 [name]: ./configuration.md#name
-[docs_dir]:./configuration.md#docs_dir
+[docs_dir]: ./configuration.md#docs_dir
 
 ## Basic theme
 
@@ -98,7 +98,7 @@ with one of the [built-in themes] and modify it accordingly.
     pattern and may want to define the same [blocks] as are used in the built-in
     themes for consistency.
 
-[Jinja]: http://jinja.pocoo.org/
+[jinja]: http://jinja.pocoo.org/
 [template inheritance]: http://jinja.pocoo.org/docs/dev/templates/#template-inheritance
 [theme_dir]: ./styling-your-docs.md#using-the-theme_dir
 [blocks]: ./styling-your-docs.md#overriding-template-blocks
@@ -122,16 +122,16 @@ The `config` variable is an instance of MkDocs' config object generated from the
 `mkdocs.yml` config file. While you can use any config option, some commonly
 used options include:
 
-* [config.site_name](./configuration.md#site_name)
-* [config.site_url](./configuration.md#site_url)
-* [config.site_author](./configuration.md#site_author)
-* [config.site_description](./configuration.md#site_description)
-* [config.extra_javascript](./configuration.md#extra_javascript)
-* [config.extra_css](./configuration.md#extra_css)
-* [config.repo_url](./configuration.md#repo_url)
-* [config.repo_name](./configuration.md#repo_name)
-* [config.copyright](./configuration.md#copyright)
-* [config.google_analytics](./configuration.md#google_analytics)
+-   [config.site_name](./configuration.md#site_name)
+-   [config.site_url](./configuration.md#site_url)
+-   [config.site_author](./configuration.md#site_author)
+-   [config.site_description](./configuration.md#site_description)
+-   [config.extra_javascript](./configuration.md#extra_javascript)
+-   [config.extra_css](./configuration.md#extra_css)
+-   [config.repo_url](./configuration.md#repo_url)
+-   [config.repo_name](./configuration.md#repo_name)
+-   [config.copyright](./configuration.md#copyright)
+-   [config.google_analytics](./configuration.md#google_analytics)
 
 #### nav
 
@@ -204,7 +204,7 @@ was updated.
 
 #### pages
 
-A list of [page](#page) objects including *all* pages in the project. The list
+A list of [page](#page) objects including _all_ pages in the project. The list
 is a flat list with all pages sorted alphanumerically by directory and file
 name. Note that index pages sort to the top within a directory. This list can
 contain pages not included in the global [navigation](#nav) and may not match
@@ -233,10 +233,10 @@ The rendered Markdown as HTML, this is the contents of the documentation.
 An iterable object representing the Table of contents for a page. Each item in
 the `toc` is an `AnchorLink` which contains the following attributes:
 
-* `AnchorLink.title`: The text of the item.
-* `AnchorLink.url`: The hash fragment of a URL pointing to the item.
-* `AnchorLink.level`: The zero-based level of the item.
-* `AnchorLink.children`: An iterable of any child items.
+-   `AnchorLink.title`: The text of the item.
+-   `AnchorLink.url`: The hash fragment of a URL pointing to the item.
+-   `AnchorLink.level`: The zero-based level of the item.
+-   `AnchorLink.children`: An iterable of any child items.
 
 The following example would display the top two levels of the Table of Contents
 for a page.
@@ -390,7 +390,7 @@ URLs and are not links of any kind. However, by default, MkDocs sorts index
 pages to the top and the first child might be used as the URL for a section if a
 theme choses to do so.
 
- The following attributes are available on `section` objects:
+The following attributes are available on `section` objects:
 
 ##### section.title
 
@@ -529,7 +529,7 @@ Safety convert a Python object to a value in a JavaScript script.
 
 ## Search and themes
 
-As of MkDocs version *0.17* client side search support has been added to MkDocs
+As of MkDocs version _0.17_ client side search support has been added to MkDocs
 via the `search` plugin. A theme needs to provide a few things for the plugin to
 work with the theme.
 
@@ -557,7 +557,7 @@ to the search results from the current page.
 <script>var base_url = '{{ base_url }}';</script>
 ```
 
-With properly configured settings, the following HTML in a template  will add a
+With properly configured settings, the following HTML in a template will add a
 full search implementation to your theme.
 
 ```django
@@ -621,7 +621,7 @@ objects.
 
 If present, the `config` object contains the key/value pairs of config options
 defined for the plugin in the user's `mkdocs.yml` config file under
-`plugings.search`. The `config` object was new in MkDocs version *1.0*.
+`plugings.search`. The `config` object was new in MkDocs version _1.0_.
 
 The `data` object contains a list of document objects. Each document object is
 made up of a `location` (URL), a `title`, and `text` which can be used to create
@@ -631,9 +631,9 @@ If present, the `index` object contains a pre-built index which offers
 performance improvements for larger sites. Note that the pre-built index is only
 created if the user explicitly enables the [prebuild_index] config option.
 Themes should expect the index to not be present, but can choose to use the
-index when it is available. The `index` object was new in MkDocs version *1.0*.
+index when it is available. The `index` object was new in MkDocs version _1.0_.
 
-[Jinja2 template]: http://jinja.pocoo.org/docs/dev/
+[jinja2 template]: http://jinja.pocoo.org/docs/dev/
 [built-in themes]: https://github.com/mkdocs/mkdocs/tree/master/mkdocs/themes
 [theme's configuration file]: #theme-configuration
 [lunr.js]: https://lunrjs.com/
@@ -659,9 +659,9 @@ Bootswatch theme].
     advantage of the [custom_dir] to make tweaks to your theme to better suit
     their needs.
 
-[Python packaging]: https://packaging.python.org/en/latest/
-[MkDocs Bootstrap theme]: https://mkdocs.github.io/mkdocs-bootstrap/
-[MkDocs Bootswatch theme]: https://mkdocs.github.io/mkdocs-bootswatch/
+[python packaging]: https://packaging.python.org/en/latest/
+[mkdocs bootstrap theme]: https://mkdocs.github.io/mkdocs-bootstrap/
+[mkdocs bootswatch theme]: https://mkdocs.github.io/mkdocs-bootswatch/
 
 ### Package Layout
 
@@ -720,8 +720,7 @@ setup(
 
 Fill in the URL, license, description, author and author email address.
 
-The name should follow the convention `mkdocs-themename` (like `mkdocs-
-bootstrap` and `mkdocs-bootswatch`), starting with MkDocs, using hyphens to
+The name should follow the convention `mkdocs-themename` (like `mkdocs- bootstrap` and `mkdocs-bootswatch`), starting with MkDocs, using hyphens to
 separate words and including the name of your theme.
 
 Most of the rest of the file can be left unedited. The last section we need to
@@ -809,5 +808,5 @@ If you don't have an account setup, you should be prompted to create one.
 For a much more detailed guide, see the official Python packaging
 documentation for [Packaging and Distributing Projects].
 
-[Packaging and Distributing Projects]: https://packaging.python.org/en/latest/distributing/
+[packaging and distributing projects]: https://packaging.python.org/en/latest/distributing/
 [theme]: ./configuration.md#theme

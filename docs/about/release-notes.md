@@ -1,8 +1,8 @@
-# Release Notes
+# 发行说明
 
 ---
 
-## Upgrading
+## 升级
 
 To upgrade MkDocs to the latest version, use pip:
 
@@ -13,7 +13,7 @@ You can determine your currently installed version using `mkdocs --version`:
     $ mkdocs --version
     mkdocs, version 1.0 from /path/to/mkdocs (Python 3.6)
 
-## Maintenance team
+## 维修团队
 
 The current and past members of the MkDocs team.
 
@@ -21,11 +21,11 @@ The current and past members of the MkDocs team.
 * [@d0ugal](https://github.com/d0ugal/)
 * [@waylan](https://github.com/waylan/)
 
-## Version 1.1 (*in development*)
+## 版本1.1（*开发中*）
 
-### Major Additions to Version 1.1
+### 版本1.1的主要补充
 
-#### Support for Lunr.py as `prebuild_index` engine
+#### 支持Lunr.py作为`prebuild_index`引擎
 
 Mkdocs now supports prebuilding indices using [Lunr.py][lunrpy-docs], a pure
 Python implementation of Lunr.js, allowing the user to avoid installing a
@@ -35,7 +35,7 @@ NodeJS environment if so desired. For more information please read the
 [lunrpy-docs]: http://lunr.readthedocs.io/
 [prebuildindex-docs]: ../../user-guide/configuration/#prebuild_index
 
-#### `readthedocs` theme updated with upstream (#588 and #1374)
+#### `readthedocs`主题更新为上游（＃588和＃1374）
 
 The `readthedocs` theme now more closely matches the [upstream] Sphinx theme
 (version 0.4.1). A number of new theme configuration settings were added which
@@ -45,7 +45,7 @@ documentation][rtd-docs] for details.
 [upstream]: https://github.com/rtfd/sphinx_rtd_theme/
 [rtd-docs]: ../user-guide/styling-your-docs.md#readthedocs
 
-## Update `mkdocs` theme to bootswatch 4.1.3 (#1563)
+## 将`mkdocs`主题更新为bootswatch 4.1.3（＃1563）
 
 The `mkdocs` theme now supports all the features of [Bootswatch 4.1]. Note that
 the [dropdowns] used in the navigation only support one level of nesting. If
@@ -54,7 +54,7 @@ your global navigation uses more than one level, things will likely be broken.
 [Bootswatch 4.1]: https://getbootstrap.com/docs/4.1/getting-started/introduction/
 [dropdowns]: https://getbootstrap.com/docs/4.1/components/navs/#pills-with-dropdowns
 
-### Other Changes and Additions to Version 1.1
+### 版本1.1的其他更改和补充
 
 * Bugfix: Exclude Markdown files and READMEs from theme. (#1766).
 * Bugfix: Account for encoded URLs (#1670).
@@ -63,7 +63,7 @@ your global navigation uses more than one level, things will likely be broken.
 * Bugfix: Skip external URLs in sitemap.xml (#1742).
 * Add canonical tag to `readthedocs` theme (#1669).
 
-## Version 1.0.4 (2018-09-07)
+## 版本1.0.4（2018-09-07）
 
 * Bugfix: Ignore absolute links in Markdown (#1621).
 
@@ -83,11 +83,11 @@ your global navigation uses more than one level, things will likely be broken.
 * Bugfix: Exclude `README.md` if `index.md` is present (#1580).
 * Bugfix: Fix `readthedocs` theme navigation bug with homepage (#1576).
 
-## Version 1.0 (2018-08-03)
+## 版本1.0（2018-08-03）
 
-### Major Additions to Version 1.0
+### 版本1.0的主要补充
 
-#### Internal Refactor of Pages, Files, and Navigation
+#### 页面，文件和导航的内部重构
 
 Internal handling of pages, files and navigation has been completely refactored.
 The changes included in the refactor are summarized below.
@@ -116,12 +116,12 @@ The changes included in the refactor are summarized below.
 
   [on_files]: ../user-guide/plugins.md#on_files
 
-##### Backward Incompatible Changes
+##### 向后不兼容的变化
 
 As part of the internal refactor, a number of backward incompatible changes have
 been introduced, which are summarized below.
 
-###### URLS have changed when `use_directory_urls` is `False`
+###### 当`use_directory_urls`为'False`时，URL已经改变
 
 Previously, all Markdown pages would be have their filenames altered to be index
 pages regardless of how the [use_directory_urls] setting was configured.
@@ -135,11 +135,11 @@ effect most users. However, if you have `use_directory_urls` set to `False`
 for a MkDocs site hosted on a web server, most of your URLs will now be broken.
 As you can see below, the new URLs are much more sensible.
 
-| Markdown file   | Old URL              | New URL        |
-| --------------- | -------------------- | -------------- |
-| `index.md`      | `index.html`         | `index.html`   |
-| `foo.md`        | `foo/index.html`     | `foo.html`     |
-| `foo/bar.md`    | `foo/bar/index.html` | `foo/bar.html` |
+| Markdown file | Old URL              | New URL        |
+| ------------- | -------------------- | -------------- |
+| `index.md`    | `index.html`         | `index.html`   |
+| `foo.md`      | `foo/index.html`     | `foo.html`     |
+| `foo/bar.md`  | `foo/bar/index.html` | `foo/bar.html` |
 
 Note that there has been no change to URLs or file paths when
 `use_directory_urls` is set to `True` (the default), except that MkDocs more
@@ -147,7 +147,7 @@ consistently includes an ending slash on all internally generated URLs.
 
 [use_directory_urls]: ../user-guide/configuration.md#use_directory_urls
 
-###### The `pages` configuration setting has been renamed to `nav`
+###### `pages`配置设置已重命名为`nav`
 
 The `pages` configuration setting is deprecated and will issue a warning if set
 in the configuration file. The setting has been renamed `nav`. To update your
@@ -173,7 +173,7 @@ no `nav` setting, the `pages` configuration will be copied to `nav` and a
 warning will be issued. However, in a future release, that may no longer happen.
 If both `pages` and `nav` are defined, the `pages` setting will be ignored.
 
-###### Template variables and `base_url`
+###### 模板变量和`base_url`
 
 In previous versions of MkDocs some URLs expected the [base_url] template
 variable to be prepended to the URL and others did not. That inconsistency has
@@ -223,7 +223,7 @@ need to will be altered.
 [base_url]: ../user-guide/custom-themes.md#base_url
 [url]: ../user-guide/custom-themes.md#url
 
-#### Path Based Settings are Relative to Configuration File (#543)
+#### 基于路径的设置与配置文件相关（＃543）
 
 Previously any relative paths in the various configuration options were
 resolved relative to the current working directory. They are now resolved
@@ -242,7 +242,7 @@ mkdocs build --config-file /path/to/my/config/file.yml
 As previously, if no file is specified, MkDocs looks for a file named
 `mkdocs.yml` in the current working directory.
 
-#### Added support for YAML Meta-Data (#1542)
+#### 增加对YAML元数据的支持（＃1542）
 
 Previously, MkDocs only supported MultiMarkdown style meta-data, which does not
 recognize different data types and is rather limited. MkDocs now also supports
@@ -271,7 +271,7 @@ meta-data.
 [MultiMarkdown style meta-data documentation]: ../user-guide/writing-your-docs.md#multimarkdown-style-meta-data
 [YAML style meta-data documentation]: ../user-guide/writing-your-docs.md#yaml-style-meta-data
 
-#### Refactor Search Plugin
+#### 重构搜索插件
 
 The search plugin has been completely refactored to include support for the
 following features:
@@ -291,14 +291,14 @@ authors should review how [search and themes] interact.
 [search config]: ../user-guide/configuration.md#search
 [search and themes]: ../user-guide/custom-themes.md#search_and_themes
 
-#### `theme_dir` Configuration Option fully Deprecated
+#### `theme_dir`配置选项完全不推荐使用
 
 As of version 0.17, the [custom_dir] option replaced the deprecated `theme_dir`
 option. If users had set the `theme_dir` option, MkDocs version 0.17 copied the
 value to the `theme.custom_dir` option and a warning was issued. As of version
 1.0, the value is no longer copied and an error is raised.
 
-### Other Changes and Additions to Version 1.0
+### 版本1.0的其他更改和添加
 
 * Keyboard shortcuts changed to not conflict with commonly used accessibility
   shortcuts (#1502.)
@@ -355,11 +355,11 @@ value to the `theme.custom_dir` option and a warning was issued. As of version
   themes (#1316).
 * Bugfix: Override `site_url` with `dev_addr` on local server (#1317).
 
-## Version 0.17.0 (2017-10-19)
+## 版本0.17.0（2017-10-19）
 
-### Major Additions to Version 0.17.0
+### 版本0.17.0的主要附加内容
 
-#### Plugin API. (#206)
+#### 插件API。 （＃206）
 
 A new [Plugin API] has been added to MkDocs which allows users to define their
 own custom behaviors. See the included documentation for a full explanation of
@@ -376,7 +376,7 @@ default.
 [Plugin API]: ../user-guide/plugins.md
 [plugin_config]: ../user-guide/configuration.md#plugins
 
-#### Theme Customization. (#1164)
+#### 主题定制。 （＃1164）
 
 Support had been added to provide theme specific customizations. Theme authors
 can define default options as documented in [Theme Configuration]. A theme can
@@ -414,9 +414,9 @@ See the [theme] configuration option documentation for details.
 [theme]: ../user-guide/configuration.md#theme
 [custom_dir]: ../user-guide/configuration.md#custom_dir
 
-#### Previously deprecated Template variables removed. (#1168)
+#### 先前已弃用的模板变量已删除。 （＃1168）
 
-##### Page Template
+##### 页面模板
 
 The primary entry point for page templates has been changed from `base.html` to
 `main.html`. This allows `base.html` to continue to exist while allowing users
@@ -425,7 +425,7 @@ continued to work if no `main.html` template existed, but it raised a
 deprecation warning. In version 1.0, a build will fail if no `main.html`
 template exists.
 
-##### Context Variables
+##### 上下文变量
 
 Page specific variable names in the template context have been refactored as
 defined in [Custom Themes](../user-guide/custom-themes.md#page). The
@@ -435,16 +435,16 @@ version 1.0.
 Any of the following old page variables should be updated to the new ones in
 user created and third-party templates:
 
-| Old Variable Name | New Variable Name   |
-| ----------------- | ------------------- |
-| current_page      | [page]              |
-| page_title        | [page.title]        |
-| content           | [page.content]      |
-| toc               | [page.toc]          |
-| meta              | [page.meta]         |
-| canonical_url     | [page.canonical_url]|
-| previous_page     | [page.previous_page]|
-| next_page         | [page.next_page]    |
+| Old Variable Name | New Variable Name    |
+| ----------------- | -------------------- |
+| current_page      | [page]               |
+| page_title        | [page.title]         |
+| content           | [page.content]       |
+| toc               | [page.toc]           |
+| meta              | [page.meta]          |
+| canonical_url     | [page.canonical_url] |
+| previous_page     | [page.previous_page] |
+| next_page         | [page.next_page]     |
 
 [page]: ../user-guide/custom-themes.md#page
 [page.title]: ../user-guide/custom-themes.md#pagetitle
@@ -540,16 +540,16 @@ but may be removed in a future version.
 Any of the following old page variables should be updated to the new ones in
 user created and third-party templates:
 
-| Old Variable Name | New Variable Name   |
-| ----------------- | ------------------- |
-| current_page      | [page]              |
-| page_title        | [page.title]        |
-| content           | [page.content]      |
-| toc               | [page.toc]          |
-| meta              | [page.meta]         |
-| canonical_url     | [page.canonical_url]|
-| previous_page     | [page.previous_page]|
-| next_page         | [page.next_page]    |
+| Old Variable Name | New Variable Name    |
+| ----------------- | -------------------- |
+| current_page      | [page]               |
+| page_title        | [page.title]         |
+| content           | [page.content]       |
+| toc               | [page.toc]           |
+| meta              | [page.meta]          |
+| canonical_url     | [page.canonical_url] |
+| previous_page     | [page.previous_page] |
+| next_page         | [page.next_page]     |
 
 [page]: ../user-guide/custom-themes.md#page
 [page.title]: ../user-guide/custom-themes.md#pagetitle

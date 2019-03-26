@@ -1,4 +1,4 @@
-# Deploying your docs
+# 部署文档
 
 A basic guide to deploying your docs to various hosting providers
 
@@ -101,16 +101,16 @@ to copy the file to your `docs_dir`. With the file properly included in your
 If you are having problems getting a custom domain to work, see GitHub's
 documentation on [Troubleshooting custom domains].
 
-[GitHub]: https://github.com/
-[GitHub Pages]: https://pages.github.com/
-[Project Pages]: https://help.github.com/articles/user-organization-and-project-pages/#project-pages-sites
-[User and Organization Pages]: https://help.github.com/articles/user-organization-and-project-pages/#user-and-organization-pages-sites
+[github]: https://github.com/
+[github pages]: https://pages.github.com/
+[project pages]: https://help.github.com/articles/user-organization-and-project-pages/#project-pages-sites
+[user and organization pages]: https://help.github.com/articles/user-organization-and-project-pages/#user-and-organization-pages-sites
 [ghp-import]: https://github.com/davisp/ghp-import
 [remote_branch]: ./configuration.md#remote_branch
-[Custom Domain]: https://help.github.com/articles/adding-or-removing-a-custom-domain-for-your-github-pages-site
+[custom domain]: https://help.github.com/articles/adding-or-removing-a-custom-domain-for-your-github-pages-site
 [docs_dir]: ./configuration.md#docs_dir
-[CNAME file]: https://github.com/mkdocs/mkdocs/blob/master/docs/CNAME
-[Troubleshooting custom domains]: https://help.github.com/articles/troubleshooting-custom-domains/
+[cname file]: https://github.com/mkdocs/mkdocs/blob/master/docs/CNAME
+[troubleshooting custom domains]: https://help.github.com/articles/troubleshooting-custom-domains/
 
 ## Read the Docs
 

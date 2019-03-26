@@ -7,40 +7,42 @@ repo_url: https://github.com/mkdocs/mkdocs/
 edit_uri: ""
 
 theme:
-    name: mkdocs
+    name: material
     highlightjs: true
     hljs_languages:
         - yaml
         - django
+    feature:
+        tabs: true
 
 nav:
-    - Home: index.md
-    - User Guide:
-        - Writing Your Docs: user-guide/writing-your-docs.md
-        - Styling Your Docs: user-guide/styling-your-docs.md
-        - Configuration: user-guide/configuration.md
-        - Deploying Your Docs: user-guide/deploying-your-docs.md
-        - Custom Themes: user-guide/custom-themes.md
-        - Plugins: user-guide/plugins.md
-    - About:
-        - Release Notes: about/release-notes.md
-        - Contributing: about/contributing.md
-        - License: about/license.md
+    - 主页: index.md
+    - 用户指南:
+          - 编辑文档: user-guide/writing-your-docs.md
+          - 化妆文档: user-guide/styling-your-docs.md
+          - 配置: user-guide/configuration.md
+          - 部署文档: user-guide/deploying-your-docs.md
+          - 自定义主题: user-guide/custom-themes.md
+          - 插件: user-guide/plugins.md
+    - 关于:
+          - 发行说明: about/release-notes.md
+          - 贡献: about/contributing.md
+          - 证书: about/license.md
 
 extra_css:
     - css/extra.css
 
 markdown_extensions:
     - toc:
-        permalink: 
+          permalink: 
     - admonition
     - def_list
     - mdx_gh_links:
-        user: mkdocs
-        repo: mkdocs
+          user: mkdocs
+          repo: mkdocs
 
 copyright: Copyright &copy; 2014 <a href="https://twitter.com/_tomchristie">Tom Christie</a>, Maintained by the <a href="/about/release-notes/#maintenance-team">MkDocs Team</a>.
-google_analytics: ['UA-27795084-5', 'mkdocs.org']
+google_analytics: ["UA-27795084-5", "mkdocs.org"]
 
 plugins:
     - search

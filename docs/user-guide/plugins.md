@@ -1,4 +1,4 @@
-# MkDocs Plugins
+# 插件
 
 A Guide to installing, using and creating MkDocs Plugins
 
@@ -39,8 +39,8 @@ separate line.
 ```yaml
 plugins:
     - search:
-        lang: en
-        foo: bar
+          lang: en
+          foo: bar
 ```
 
 For information regarding the configuration options available for a given plugin,
@@ -67,10 +67,10 @@ All `BasePlugin` subclasses contain the following attributes:
 
 #### config_scheme
 
-:   A tuple of configuration validation instances. Each item must consist of a
-    two item tuple in which the first item is the string name of the
-    configuration option and the second item is an instance of
-    `mkdocs.config.config_options.BaseConfigOption` or any of its subclasses.
+: A tuple of configuration validation instances. Each item must consist of a
+two item tuple in which the first item is the string name of the
+configuration option and the second item is an instance of
+`mkdocs.config.config_options.BaseConfigOption` or any of its subclasses.
 
     For example, the following `config_scheme` defines three configuration options: `foo`, which accepts a string; `bar`, which accepts an integer; and `baz`, which accepts a boolean value.
 
@@ -92,9 +92,9 @@ All `BasePlugin` subclasses contain the following attributes:
 
 #### config
 
-:   A dictionary of configuration options for the plugin, which is populated by
-    the `load_config` method after configuration validation has completed. Use
-    this attribute to access options provided by the user.
+: A dictionary of configuration options for the plugin, which is populated by
+the `load_config` method after configuration validation has completed. Use
+this attribute to access options provided by the user.
 
         def on_pre_build(self, config):
             if self.config['bool_option']:
@@ -104,16 +104,16 @@ All `BasePlugin` subclasses contain the following method(s):
 
 #### load_config(options)
 
-:   Loads configuration from a dictionary of options. Returns a tuple of
-    `(errors, warnings)`. This method is called by MkDocs during configuration
-    validation and should not need to be called by the plugin.
+: Loads configuration from a dictionary of options. Returns a tuple of
+`(errors, warnings)`. This method is called by MkDocs during configuration
+validation and should not need to be called by the plugin.
 
-#### on_&lt;event_name&gt;()
+#### on\_&lt;event_name&gt;()
 
-:   Optional methods which define the behavior for specific [events]. The plugin
-    should define its behavior within these methods. Replace `<event_name>` with
-    the actual name of the event. For example, the `pre_build` event would be
-    defined in the `on_pre_build` method.
+: Optional methods which define the behavior for specific [events]. The plugin
+should define its behavior within these methods. Replace `<event_name>` with
+the actual name of the event. For example, the `pre_build` event would be
+defined in the `on_pre_build` method.
 
     Most events accept one positional argument and various keyword arguments. It
     is generally expected that the positional argument would be modified (or
@@ -146,10 +146,10 @@ entire site.
 
 ##### on_serve
 
-:   The `serve` event is only called when the `serve` command is used during
-    development. It is passed the `Server` instance which can be modified before
-    it is activated. For example, additional files or directories could be added
-    to the list of "watched" files for auto-reloading.
+: The `serve` event is only called when the `serve` command is used during
+development. It is passed the `Server` instance which can be modified before
+it is activated. For example, additional files or directories could be added
+to the list of "watched" files for auto-reloading.
 
     Parameters:
     : __server:__ `livereload.Server` instance
@@ -160,9 +160,9 @@ entire site.
 
 ##### on_config
 
-:   The `config` event is the first event called on build and is run immediately
-    after the user configuration is loaded and validated. Any alterations to the
-    config should be made here.
+: The `config` event is the first event called on build and is run immediately
+after the user configuration is loaded and validated. Any alterations to the
+config should be made here.
 
     Parameters:
     : __config:__ global configuration object
@@ -172,19 +172,19 @@ entire site.
 
 ##### on_pre_build
 
-:   The `pre_build` event does not alter any variables. Use this event to call
-    pre-build scripts.
+: The `pre_build` event does not alter any variables. Use this event to call
+pre-build scripts.
 
     Parameters:
     : __config:__ global configuration object
 
 ##### on_files
 
-:   The `files` event is called after the files collection is populated from the
-    `docs_dir`. Use this event to add, remove, or alter files in the
-    collection. Note that Page objects have not yet been associated with the
-    file objects in the collection. Use [Page Events] to manipulate page
-    specific data.
+: The `files` event is called after the files collection is populated from the
+`docs_dir`. Use this event to add, remove, or alter files in the
+collection. Note that Page objects have not yet been associated with the
+file objects in the collection. Use [Page Events] to manipulate page
+specific data.
 
     Parameters:
     : __files:__ global files collection
@@ -195,8 +195,8 @@ entire site.
 
 ##### on_nav
 
-:   The `nav` event is called after the site navigation is created and can
-    be used to alter the site navigation.
+: The `nav` event is called after the site navigation is created and can
+be used to alter the site navigation.
 
     Parameters:
     : __nav:__ global navigation object
@@ -208,8 +208,8 @@ entire site.
 
 ##### on_env
 
-:   The `env` event is called after the Jinja template environment is created
-    and can be used to alter the Jinja environment.
+: The `env` event is called after the Jinja template environment is created
+and can be used to alter the Jinja environment.
 
     Parameters:
     : __env:__ global Jinja environment
@@ -221,8 +221,8 @@ entire site.
 
 ##### on_post_build
 
-:   The `post_build` event does not alter any variables. Use this event to call
-    post-build scripts.
+: The `post_build` event does not alter any variables. Use this event to call
+post-build scripts.
 
     Parameters:
     : __config:__ global configuration object
@@ -236,8 +236,8 @@ called after the [env] event and before any [page events].
 
 ##### on_pre_template
 
-:   The `pre_template` event is called immediately after the subject template is
-    loaded and can be used to alter the content of the template.
+: The `pre_template` event is called immediately after the subject template is
+loaded and can be used to alter the content of the template.
 
     Parameters:
     : __template__: the template contents as string
@@ -249,9 +249,9 @@ called after the [env] event and before any [page events].
 
 ##### on_template_context
 
-:   The `template_context` event is called immediately after the context is created
-    for the subject template and can be used to alter the context for that specific
-    template only.
+: The `template_context` event is called immediately after the context is created
+for the subject template and can be used to alter the context for that specific
+template only.
 
     Parameters:
     : __context__: dict of template context variables
@@ -263,10 +263,10 @@ called after the [env] event and before any [page events].
 
 ##### on_post_template
 
-:   The `post_template` event is called after the template is rendered, but before
-    it is written to disc and can be used to alter the output of the template.
-    If an empty string is returned, the template is skipped and nothing is is
-    written to disc.
+: The `post_template` event is called after the template is rendered, but before
+it is written to disc and can be used to alter the output of the template.
+If an empty string is returned, the template is skipped and nothing is is
+written to disc.
 
     Parameters:
     : __output_content__: output of rendered template as string
@@ -284,8 +284,8 @@ page events are called after the [post_template] event and before the
 
 ##### on_pre_page
 
-:   The `pre_page` event is called before any actions are taken on the subject
-    page and can be used to alter the `Page` instance.
+: The `pre_page` event is called before any actions are taken on the subject
+page and can be used to alter the `Page` instance.
 
     Parameters:
     : __page:__ `mkdocs.nav.Page` instance
@@ -297,8 +297,8 @@ page events are called after the [post_template] event and before the
 
 ##### on_page_read_source
 
-:   The `on_page_read_source` event can replace the default mechanism to read
-    the contents of a page's source from the filesystem.
+: The `on_page_read_source` event can replace the default mechanism to read
+the contents of a page's source from the filesystem.
 
     Parameters:
     : __page:__ `mkdocs.nav.Page` instance
@@ -310,9 +310,9 @@ page events are called after the [post_template] event and before the
 
 ##### on_page_markdown
 
-:   The `page_markdown` event is called after the page's markdown is loaded
-    from file and can be used to alter the Markdown source text. The meta-
-    data has been stripped off and is available as `page.meta` at this point.
+: The `page_markdown` event is called after the page's markdown is loaded
+from file and can be used to alter the Markdown source text. The meta-
+data has been stripped off and is available as `page.meta` at this point.
 
     Parameters:
     : __markdown:__ Markdown source text of page as string
@@ -325,9 +325,9 @@ page events are called after the [post_template] event and before the
 
 ##### on_page_content
 
-:   The `page_content` event is called after the Markdown text is rendered to
-    HTML (but before being passed to a template) and can be used to alter the
-    HTML body of the page.
+: The `page_content` event is called after the Markdown text is rendered to
+HTML (but before being passed to a template) and can be used to alter the
+HTML body of the page.
 
     Parameters:
     : __html:__ HTML rendered from Markdown source as string
@@ -340,8 +340,8 @@ page events are called after the [post_template] event and before the
 
 ##### on_page_context
 
-:   The `page_context` event is called after the context for a page is created
-    and can be used to alter the context for that specific page only.
+: The `page_context` event is called after the context for a page is created
+and can be used to alter the context for that specific page only.
 
     Parameters:
     : __context__: dict of template context variables
@@ -354,10 +354,10 @@ page events are called after the [post_template] event and before the
 
 ##### on_post_page
 
-:   The `post_page` event is called after the template is rendered, but
-    before it is written to disc and can be used to alter the output of the
-    page. If an empty string is returned, the page is skipped and nothing is
-    written to disc.
+: The `post_page` event is called after the template is rendered, but
+before it is written to disc and can be used to alter the output of the
+page. If an empty string is returned, the page is skipped and nothing is
+written to disc.
 
     Parameters:
     : __output:__ output of rendered template as string
@@ -400,15 +400,15 @@ entry_points={
 Note that registering a plugin does not activate it. The user still needs to
 tell MkDocs to use if via the config.
 
-[BasePlugin]:#baseplugin
+[baseplugin]: #baseplugin
 [config]: configuration.md#plugins
 [entry point]: #entry-point
 [env]: #on_env
 [events]: #events
 [extra_templates]: configuration.md#extra_templates
-[Global Events]: #global-events
-[Page Events]: #page-events
+[global events]: #global-events
+[page events]: #page-events
 [post_build]: #on_post_build
 [post_template]: #on_post_template
 [static_templates]: configuration.md#static_templates
-[Template Events]: #template-events
+[template events]: #template-events

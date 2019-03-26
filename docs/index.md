@@ -1,43 +1,43 @@
 # MkDocs
 
-Project documentation with&nbsp;Markdown.
+带有 Markdown 的项目文档。
 
 ---
 
-## Overview
+## 概观
 
 MkDocs is a **fast**, **simple** and **downright gorgeous** static site
 generator that's geared towards building project documentation. Documentation
 source files are written in Markdown, and configured with a single YAML
 configuration file.
 
-### Host anywhere
+### 主持任何地方
 
 MkDocs builds completely static HTML sites that you can host on GitHub pages,
 Amazon S3, or [anywhere][deploy] else you choose.
 
-### Great themes available
+### 很棒的主题
 
 There's a stack of good looking themes available for MkDocs. Choose between
 the built in themes: [mkdocs] and [readthedocs], select one of the 3rd
 party themes in the [MkDocs wiki], or [build your own].
 
-### Preview your site as you work
+### 在您工作时预览您的网站
 
 The built-in dev-server allows you to preview your documentation as you're
 writing it. It will even auto-reload and refresh your browser whenever you save
 your changes.
 
-### Easy to customize
+### 易于定制
 
 Get your project documentation looking just the way you want it by customizing
 the theme.
 
 ---
 
-## Installation
+## 安装
 
-### Install with a Package Manager
+### 使用程序包管理器安装
 
 If you have and use a package manager (such as [apt-get], [dnf], [homebrew],
 [yum], [chocolatey], etc.) to install packages on your system, then you may
@@ -55,7 +55,7 @@ use your package manager to install "Python" and "pip". Then you can use pip to
 [yum]: http://yum.baseurl.org/
 [chocolatey]: https://chocolatey.org/
 
-### Manual Installation
+### 手动安装
 
 In order to manually install MkDocs you'll need [Python] installed on your
 system, as well as the Python package manager, [pip]. You can check if you have
@@ -70,7 +70,7 @@ pip 18.1 from /usr/local/lib/python2.7/site-packages/pip (python 2.7)
 
 MkDocs supports Python versions 2.7.9+, 3.4, 3.5, 3.6, 3.7, and pypy.
 
-#### Installing Python
+#### 安装 Python
 
 Install [Python] by downloading an installer appropriate for your system from
 [python.org] and running it.
@@ -85,7 +85,7 @@ Install [Python] by downloading an installer appropriate for your system from
 
 [python.org]: https://www.python.org/downloads/
 
-#### Installing pip
+#### 安装 pip
 
 If you're using a recent version of Python, the Python package manager, [pip],
 is most likely installed by default. However, you may need to upgrade pip to the
@@ -102,7 +102,7 @@ Then run the following command to install it:
 python get-pip.py
 ```
 
-#### Installing MkDocs
+#### 安装 MkDocs
 
 Install the `mkdocs` package using pip:
 
@@ -110,8 +110,7 @@ Install the `mkdocs` package using pip:
 pip install mkdocs
 ```
 
-You should now have the `mkdocs` command installed on your system. Run `mkdocs
---version` to check that everything worked okay.
+You should now have the `mkdocs` command installed on your system. Run `mkdocs --version` to check that everything worked okay.
 
 ```bash
 $ mkdocs --version
@@ -119,8 +118,8 @@ mkdocs, version 0.15.3
 ```
 
 !!! Note
-    If you would like manpages installed for MkDocs, the [click-man] tool can
-    generate and install them for you. Simply run the following two commands:
+If you would like manpages installed for MkDocs, the [click-man] tool can
+generate and install them for you. Simply run the following two commands:
 
         pip install click-man
         click-man --target path/to/man/pages mkdocs
@@ -132,8 +131,8 @@ mkdocs, version 0.15.3
 [click-man documentation]: https://github.com/click-contrib/click-man#automatic-man-page-installation-with-setuptools-and-pip
 
 !!! Note
-    If you are using Windows, some of the above commands may not work
-    out-of-the-box.
+If you are using Windows, some of the above commands may not work
+out-of-the-box.
 
     A quick solution may be to preface every Python command with `python -m`
     like this:
@@ -153,7 +152,7 @@ mkdocs, version 0.15.3
 
 ---
 
-## Getting Started
+## 入门
 
 Getting started is super easy.
 
@@ -209,7 +208,7 @@ effect.
 
 ![The site_name setting](img/site-name.png)
 
-## Adding pages
+## 添加页面
 
 Now add a second page to your documentation:
 
@@ -244,7 +243,7 @@ part!
 
 ![Screenshot](img/search.png)
 
-## Theming our documentation
+## 主题化文档
 
 Now change the configuration file to alter how the documentation is displayed by
 changing the theme. Edit the `mkdocs.yml` file and add a [`theme`][theme] setting:
@@ -261,16 +260,16 @@ Save your changes, and you'll see the ReadTheDocs theme being used.
 
 ![Screenshot](img/readthedocs.png)
 
-## Changing the Favicon Icon
+## 更改 Favicon 图标
 
 By default, MkDocs uses the [MkDocs favicon] icon. To use a different icon, create
 an `img` subdirectory in your `docs_dir` and copy your custom `favicon.ico` file
 to that directory. MkDocs will automatically detect and use that file as your
 favicon icon.
 
-[MkDocs favicon]: /img/favicon.ico
+[mkdocs favicon]: /img/favicon.ico
 
-## Building the site
+## 构建网站
 
 That's looking good. You're ready to deploy the first pass of your `MkLorum`
 documentation. First build the documentation:
@@ -312,7 +311,7 @@ with the `--clean` switch.
 mkdocs build --clean
 ```
 
-## Other Commands and Options
+## 其他命令和选项
 
 There are various other commands and options available. For a complete list of
 commands, use the `--help` flag:
@@ -329,7 +328,7 @@ with that command. For example, to get a list of all options available for the
 mkdocs build --help
 ```
 
-## Deploying
+## 部署
 
 The documentation site that you just built only uses static files so you'll be
 able to host it from pretty much anywhere. [GitHub project pages] and [Amazon
@@ -338,7 +337,7 @@ of the entire `site` directory to wherever you're hosting your website from and
 you're done. For specific instructions on a number of common hosts, see the
 [Deploying your Docs][deploy] page.
 
-## Getting help
+## 获得帮助
 
 To get help with MkDocs, please use the [discussion group], [GitHub issues] or
 the MkDocs IRC channel `#mkdocs` on freenode.
@@ -346,15 +345,15 @@ the MkDocs IRC channel `#mkdocs` on freenode.
 [deploy]: user-guide/deploying-your-docs/
 [mkdocs]: user-guide/styling-your-docs/#mkdocs
 [readthedocs]: user-guide/styling-your-docs/#readthedocs
-[MkDocs wiki]: https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes
+[mkdocs wiki]: https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes
 [build your own]: user-guide/custom-themes/
-[Amazon S3]: https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html
+[amazon s3]: https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html
 [get-pip.py]: https://bootstrap.pypa.io/get-pip.py
 [nav]: user-guide/configuration/#nav
 [discussion group]: https://groups.google.com/forum/#!forum/mkdocs
-[GitHub issues]: https://github.com/mkdocs/mkdocs/issues
-[GitHub project pages]: https://help.github.com/articles/creating-project-pages-manually/
+[github issues]: https://github.com/mkdocs/mkdocs/issues
+[github project pages]: https://help.github.com/articles/creating-project-pages-manually/
 [pip]: https://pip.readthedocs.io/en/stable/installing/
-[Python]: https://www.python.org/
+[python]: https://www.python.org/
 [site_name]: user-guide/configuration/#site_name
 [theme]: user-guide/configuration/#theme

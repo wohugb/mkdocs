@@ -1,4 +1,4 @@
-# Contributing to MkDocs
+# 为 MkDocs 做贡献
 
 An introduction to contributing to the MkDocs project.
 
@@ -6,9 +6,9 @@ The MkDocs project welcomes, and depends, on contributions from developers and
 users in the open source community. Contributions can be made in a number of
 ways, a few examples are:
 
-- Code patches via pull requests
-- Documentation improvements
-- Bug reports and patch reviews
+-   Code patches via pull requests
+-   Documentation improvements
+-   Bug reports and patch reviews
 
 ## Code of Conduct
 
@@ -69,4 +69,4 @@ most likely need to have tests and documentation if it is a new feature.
 [pip]: https://pip.pypa.io/en/stable/
 [tox]: https://tox.readthedocs.io/en/latest/
 [travis]: https://travis-ci.org/repositories
-[PyPA Code of Conduct]: https://www.pypa.io/en/latest/code-of-conduct/
+[pypa code of conduct]: https://www.pypa.io/en/latest/code-of-conduct/
